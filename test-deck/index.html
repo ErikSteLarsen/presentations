@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Presentation</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/highlight/monokai.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap');
+
+    :root {
+      --c-bg:        #f5f7f0;
+      --c-deep:      #1a2e1a;
+      --c-heading:   #2d6a4f;
+      --c-accent:    #52b788;
+      --c-bright:    #7bc67e;
+      --c-surface:   #e9f5ee;
+      --c-muted:     #6a8f6a;
+      --c-white:     #ffffff;
+      --radius:      12px;
+      --font-main:   'Nunito', sans-serif;
+      --font-mono:   'JetBrains Mono', monospace;
+    }
+
+    /* ── Base ── */
+    .reveal-viewport { background: var(--c-bg); }
+
+    .reveal {
+      font-family: var(--font-main);
+      font-size: 36px;
+      font-weight: 400;
+      color: var(--c-deep);
+    }
+
+    .reveal .slides { text-align: left; }
+
+    /* ── Headings ── */
+    .reveal h1, .reveal h2, .reveal h3, .reveal h4 {
+      font-family: var(--font-main);
+      font-weight: 800;
+      color: var(--c-heading);
+      text-transform: none;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+      margin-bottom: 0.4em;
+    }
+
+    .reveal h1 { font-size: 2em; }
+    .reveal h2 { font-size: 1.5em; }
+    .reveal h3 { font-size: 1.15em; color: var(--c-accent); }
+
+    /* ── Title slide (first section) ── */
+    .reveal .slides > section:first-child {
+      text-align: center;
+    }
+    .reveal .slides > section:first-child h1 {
+      font-size: 2.2em;
+      color: var(--c-heading);
+    }
+    .reveal .slides > section:first-child p {
+      color: var(--c-muted);
+      font-size: 0.75em;
+      font-weight: 600;
+    }
+
+    /* ── Body text ── */
+    .reveal p {
+      line-height: 1.6;
+      margin: 0 0 0.5em;
+    }
+
+    /* ── Lists ── */
+    .reveal ul, .reveal ol {
+      display: block;
+      margin: 0 0 0 1.2em;
+    }
+
+    .reveal ul li {
+      list-style: none;
+      position: relative;
+      padding-left: 1.2em;
+      margin-bottom: 0.45em;
+      line-height: 1.5;
+    }
+
+    .reveal ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.55em;
+      width: 0.5em;
+      height: 0.5em;
+      background: var(--c-bright);
+      border-radius: 50%;
+    }
+
+    .reveal ol li { margin-bottom: 0.45em; line-height: 1.5; }
+
+    /* ── Code ── */
+    .reveal code {
+      font-family: var(--font-mono);
+      background: var(--c-surface);
+      color: var(--c-heading);
+      padding: 0.05em 0.3em;
+      border-radius: 6px;
+      font-size: 0.85em;
+    }
+
+    .reveal pre {
+      border-radius: var(--radius);
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+      width: 100%;
+    }
+
+    .reveal pre code {
+      background: transparent;
+      padding: 0;
+      border-radius: 0;
+      font-size: 0.75em;
+      line-height: 1.5;
+    }
+
+    /* ── Blockquote ── */
+    .reveal blockquote {
+      background: var(--c-surface);
+      border-left: 5px solid var(--c-bright);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 0.8em 1.2em;
+      font-style: normal;
+      font-weight: 600;
+      color: var(--c-heading);
+      box-shadow: none;
+      width: 100%;
+    }
+
+    /* ── Links ── */
+    .reveal a {
+      color: var(--c-accent);
+      text-decoration: none;
+      border-bottom: 2px solid var(--c-bright);
+    }
+
+    /* ── Two-column layout: use <div class="cols"> ── */
+    .reveal .cols {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2em;
+      align-items: start;
+    }
+
+    /* ── Image placeholder ── */
+    .reveal .img-placeholder {
+      background: var(--c-surface);
+      border: 2px dashed var(--c-accent);
+      border-radius: var(--radius);
+      padding: 2em;
+      text-align: center;
+      color: var(--c-muted);
+      font-size: 0.7em;
+      font-weight: 600;
+    }
+
+    /* ── Section header slide: add class="section-header" to section ── */
+    .reveal section.section-header {
+      background: linear-gradient(135deg, #2d6a4f 0%, #52b788 100%);
+      border-radius: var(--radius);
+    }
+    .reveal section.section-header h2 {
+      color: var(--c-white);
+      font-size: 2em;
+      text-align: center;
+    }
+
+    /* ── Closing slide ── */
+    .reveal section.closing {
+      text-align: center;
+    }
+    .reveal section.closing h2 {
+      font-size: 2em;
+    }
+
+    /* ── Progress bar ── */
+    .reveal .progress { color: var(--c-bright); }
+
+    /* ── Slide number ── */
+    .reveal .slide-number {
+      font-family: var(--font-main);
+      font-size: 0.5em;
+      color: var(--c-muted);
+      background: transparent;
+    }
+
+    /* ── Controls ── */
+    .reveal .controls { color: var(--c-accent); }
+  </style>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section data-markdown
+               data-separator="^\n---\n$"
+               data-separator-vertical="^\n--\n$"
+               data-separator-notes="^Note:">
+        <script type="text/template">
+# AI Presentation System
+
+Your forest-themed slide generator — ready to use.
+
+Note: This is the title slide. Welcome the audience and introduce the system.
+
+---
+
+## What This Is
+
+- Generate presentations by describing what you want
+- Custom forest theme — clean, rounded, bright
+- Reveal.js — open in any browser, no installation needed
+- Editable markdown source per presentation
+
+Note: Walk through the four core value props. Emphasize that there's zero setup per presentation.
+
+---
+
+## How to Use It
+
+1. Start Claude Code in this folder
+2. Include `_skill/create-presentation.md` as context
+3. Describe your deck — topic, audience, slides
+4. Open the generated `index.html` in your browser
+
+Note: Demonstrate the workflow. The user describes the deck, Claude generates slides.md and index.html.
+
+---
+
+## Slide Types Available
+
+- **Title** — opening slide
+- **Bullets** — up to 5 points per slide
+- **Two-column** — side-by-side content
+- **Quote** — highlighted blockquote
+- **Closing** — thank you / Q&A
+
+Note: You can mix and match these types. When giving Claude per-slide direction, just describe what you want — it picks the right type.
+
+---
+
+> "A good presentation is a story, not a list."
+
+— Every speaker coach, ever
+
+Note: Use quote slides sparingly — one or two per deck for impact.
+
+---
+
+## You're Ready
+
+Questions? Edit `CONTEXT.md` to change defaults anytime.
+
+Note: Close with a clear next step. Remind the audience that all defaults live in CONTEXT.md and can be adjusted at any time.
+        </script>
+      </section>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/markdown/markdown.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/notes/notes.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/highlight/highlight.js"></script>
+  <script>
+    Reveal.initialize({
+      hash: true,
+      slideNumber: 'c/t',
+      progress: true,
+      transition: 'fade',
+      backgroundTransition: 'fade',
+      center: false,
+      margin: 0.08,
+      plugins: [RevealMarkdown, RevealNotes, RevealHighlight]
+    });
+  </script>
+</body>
+</html>
