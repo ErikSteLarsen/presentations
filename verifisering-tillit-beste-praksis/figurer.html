@@ -1,0 +1,212 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>Bouvet figures</title>
+<style>body{background:#fbf9f5;font-family:system-ui;margin:40px}
+h1{color:#14143a} .grid{display:flex;flex-wrap:wrap;gap:24px}
+.cell{background:#fff;border-radius:16px;padding:18px;text-align:center;box-shadow:0 6px 26px rgba(30,60,90,.08);width:160px}
+.lbl{margin-top:8px;font-size:13px;color:#c96f2e;font-weight:600}</style></head>
+<body><h1>Bouvet figur-bibliotek</h1><svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <!-- ── People (dot-eyes only, no mouths) ── -->
+
+      <!-- Plain head on a cream quarter-circle body -->
+      <symbol id="bv-person" viewBox="0 0 100 100">
+        <path d="M20 92 v-26 a26 26 0 0 1 26 -26 h26 v52 z" fill="#f0e4cc"/>
+        <circle cx="50" cy="34" r="20" fill="#f0a86c"/>
+        <circle cx="43" cy="32" r="3.2" fill="#14143a"/>
+        <circle cx="55" cy="32" r="3.2" fill="#14143a"/>
+      </symbol>
+
+      <!-- Utforske: explorer with magnifying glass -->
+      <symbol id="bv-explorer" viewBox="0 0 100 100">
+        <path d="M40 92 v-26 a26 26 0 0 1 26 -26 h0 v52 z" fill="#f0e4cc"/>
+        <circle cx="50" cy="34" r="20" fill="#f0a86c"/>
+        <circle cx="45" cy="32" r="3.2" fill="#14143a"/>
+        <circle cx="56" cy="32" r="3.2" fill="#14143a"/>
+        <rect x="22" y="58" width="34" height="11" rx="2" fill="#14143a" transform="rotate(20 39 63)"/>
+        <circle cx="22" cy="56" r="12" fill="none" stroke="#1d43c6" stroke-width="6"/>
+      </symbol>
+
+      <!-- Definere: board with shapes + head -->
+      <symbol id="bv-board" viewBox="0 0 100 100">
+        <rect x="12" y="14" width="76" height="50" rx="3" fill="#c0ccd8"/>
+        <rect x="22" y="24" width="15" height="15" fill="#ffffff"/>
+        <rect x="40" y="30" width="18" height="18" fill="#78fc9c"/>
+        <rect x="64" y="26" width="18" height="6" fill="#14143a"/>
+        <rect x="64" y="38" width="18" height="6" fill="#14143a"/>
+        <path d="M30 88 v-12 a14 14 0 0 1 14 -14 h0 v26 z" fill="#1d43c6"/>
+        <circle cx="44" cy="60" r="15" fill="#f0a86c"/>
+        <circle cx="39" cy="58" r="2.8" fill="#14143a"/>
+        <circle cx="49" cy="58" r="2.8" fill="#14143a"/>
+      </symbol>
+
+      <!-- Idégenerere: speech bubbles + head -->
+      <symbol id="bv-ideate" viewBox="0 0 100 100">
+        <circle cx="46" cy="72" r="20" fill="#f0a86c"/>
+        <circle cx="40" cy="70" r="3" fill="#14143a"/>
+        <circle cx="51" cy="70" r="3" fill="#14143a"/>
+        <rect x="10" y="12" width="40" height="28" rx="13" fill="#14143a"/>
+        <path d="M20 38 l0 13 l13 -11 z" fill="#14143a"/>
+        <rect x="56" y="20" width="34" height="24" rx="12" fill="#c0ccd8"/>
+        <path d="M82 42 l0 12 l-12 -10 z" fill="#c0ccd8"/>
+      </symbol>
+
+      <!-- Teste: reviewer head + main head + mint triangle -->
+      <symbol id="bv-test" viewBox="0 0 100 100">
+        <polygon points="60,86 92,86 92,46" fill="#78fc9c"/>
+        <circle cx="26" cy="28" r="11" fill="#c0ccd8"/>
+        <circle cx="23" cy="27" r="2.4" fill="#14143a"/>
+        <circle cx="30" cy="27" r="2.4" fill="#14143a"/>
+        <path d="M34 88 v-16 a18 18 0 0 1 18 -18 h0 v34 z" fill="#1d43c6"/>
+        <circle cx="48" cy="58" r="19" fill="#f0a86c"/>
+        <circle cx="42" cy="56" r="3" fill="#14143a"/>
+        <circle cx="54" cy="56" r="3" fill="#14143a"/>
+      </symbol>
+
+      <!-- ── Objects (pure geometry) ── -->
+
+      <!-- Computer / monitor -->
+      <symbol id="bv-computer" viewBox="0 0 100 100">
+        <rect x="14" y="16" width="72" height="50" rx="3" fill="#14143a"/>
+        <circle cx="34" cy="40" r="10" fill="#f0a86c"/>
+        <rect x="50" y="30" width="26" height="6" fill="#c0ccd8"/>
+        <rect x="50" y="42" width="26" height="6" fill="#ffffff"/>
+        <rect x="44" y="66" width="12" height="9" fill="#14143a"/>
+        <rect x="30" y="75" width="40" height="6" rx="3" fill="#14143a"/>
+      </symbol>
+
+      <!-- Tree: quarter-circle canopy + trunk -->
+      <symbol id="bv-tree" viewBox="0 0 100 100">
+        <rect x="45" y="58" width="10" height="34" fill="#c96f2e"/>
+        <path d="M22 64 v-2 a28 28 0 0 1 56 0 v2 z" fill="#78fc9c"/>
+        <circle cx="40" cy="44" r="7" fill="#f0e4cc"/>
+        <rect x="56" y="40" width="12" height="12" fill="#f0a86c"/>
+      </symbol>
+
+      <!-- Leaf: two quarter-circles forming a leaf + stem -->
+      <symbol id="bv-leaf" viewBox="0 0 100 100">
+        <path d="M50 86 a44 44 0 0 1 44 -44 a44 44 0 0 1 -44 44 z" fill="#78fc9c"/>
+        <path d="M50 86 a44 44 0 0 0 -36 -72 a44 44 0 0 0 36 72 z" fill="#c0ccd8"/>
+        <line x1="50" y1="86" x2="50" y2="20" stroke="#14143a" stroke-width="4" stroke-linecap="round"/>
+      </symbol>
+
+      <!-- Hills + sun: layered quarter/half circles, a calm landscape -->
+      <symbol id="bv-hills" viewBox="0 0 100 100">
+        <circle cx="72" cy="30" r="14" fill="#f0a86c"/>
+        <path d="M0 88 a40 40 0 0 1 80 0 z" fill="#78fc9c"/>
+        <path d="M44 88 a34 34 0 0 1 68 0 z" fill="#c0ccd8"/>
+        <path d="M-8 88 a26 26 0 0 1 52 0 z" fill="#14143a"/>
+      </symbol>
+
+      <!-- River / waves: stacked wavy bars between banks -->
+      <symbol id="bv-river" viewBox="0 0 100 100">
+        <path d="M6 36 q12 -10 24 0 t24 0 t24 0 t24 0 v10 q-12 10 -24 0 t-24 0 t-24 0 t-24 0 z" fill="#c0ccd8"/>
+        <path d="M6 58 q12 -10 24 0 t24 0 t24 0 t24 0 v10 q-12 10 -24 0 t-24 0 t-24 0 t-24 0 z" fill="#1d43c6"/>
+        <circle cx="78" cy="22" r="10" fill="#f0a86c"/>
+      </symbol>
+
+      <!-- Flower: petal circles around a center -->
+      <symbol id="bv-flower" viewBox="0 0 100 100">
+        <rect x="47" y="52" width="6" height="40" fill="#c96f2e"/>
+        <path d="M50 60 v-6 a16 16 0 0 1 16 6 z" fill="#78fc9c"/>
+        <circle cx="50" cy="34" r="12" fill="#f0a86c"/>
+        <circle cx="32" cy="44" r="12" fill="#c0ccd8"/>
+        <circle cx="68" cy="44" r="12" fill="#1d43c6"/>
+        <circle cx="40" cy="22" r="12" fill="#78fc9c"/>
+        <circle cx="60" cy="22" r="12" fill="#f0e4cc"/>
+        <circle cx="50" cy="34" r="8" fill="#14143a"/>
+      </symbol>
+
+      <!-- Mountain: overlapping triangles + sun circle -->
+      <symbol id="bv-mountain" viewBox="0 0 100 100">
+        <circle cx="74" cy="28" r="12" fill="#f0a86c"/>
+        <polygon points="8,86 42,30 76,86" fill="#c0ccd8"/>
+        <polygon points="44,86 70,44 96,86" fill="#14143a"/>
+        <polygon points="36,44 42,30 50,44" fill="#ffffff"/>
+      </symbol>
+
+      <!-- Sun / burst: circle + quarter accents -->
+      <symbol id="bv-sun" viewBox="0 0 100 100">
+        <circle cx="50" cy="50" r="22" fill="#f0a86c"/>
+        <path d="M50 12 a8 8 0 0 1 8 8 h-16 a8 8 0 0 1 8 -8 z" fill="#c96f2e"/>
+        <rect x="78" y="46" width="14" height="8" rx="4" fill="#78fc9c"/>
+        <rect x="8" y="46" width="14" height="8" rx="4" fill="#c0ccd8"/>
+        <polygon points="44,82 56,82 50,94" fill="#1d43c6"/>
+      </symbol>
+
+      <!-- Plant in pot: leaves + trapezoid pot -->
+      <symbol id="bv-plant" viewBox="0 0 100 100">
+        <path d="M50 60 v-6 a22 22 0 0 1 22 -22 h0 a22 22 0 0 1 -22 22 z" fill="#78fc9c"/>
+        <path d="M50 60 v-6 a22 22 0 0 0 -22 -22 h0 a22 22 0 0 0 22 22 z" fill="#c0ccd8"/>
+        <rect x="46" y="30" width="8" height="34" fill="#c96f2e"/>
+        <polygon points="34,64 66,64 60,90 40,90" fill="#f0a86c"/>
+      </symbol>
+
+      <!-- Lightbulb: circle + base, idea -->
+      <symbol id="bv-bulb" viewBox="0 0 100 100">
+        <circle cx="50" cy="44" r="26" fill="#f0a86c"/>
+        <rect x="40" y="66" width="20" height="8" fill="#14143a"/>
+        <rect x="43" y="76" width="14" height="6" fill="#14143a"/>
+        <path d="M50 44 v-18 a4 4 0 0 1 0 0" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+        <line x1="50" y1="28" x2="50" y2="46" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+      </symbol>
+
+      <!-- Building / city: stacked rectangles -->
+      <symbol id="bv-building" viewBox="0 0 100 100">
+        <rect x="16" y="40" width="26" height="50" fill="#c0ccd8"/>
+        <rect x="44" y="20" width="24" height="70" fill="#14143a"/>
+        <rect x="70" y="52" width="18" height="38" fill="#f0a86c"/>
+        <rect x="50" y="28" width="5" height="5" fill="#78fc9c"/>
+        <rect x="58" y="28" width="5" height="5" fill="#ffffff"/>
+        <rect x="50" y="40" width="5" height="5" fill="#ffffff"/>
+        <rect x="58" y="40" width="5" height="5" fill="#78fc9c"/>
+      </symbol>
+
+      <!-- Book / docs -->
+      <symbol id="bv-book" viewBox="0 0 100 100">
+        <rect x="20" y="20" width="60" height="60" rx="3" fill="#1d43c6"/>
+        <rect x="30" y="20" width="6" height="60" fill="#14143a"/>
+        <rect x="44" y="34" width="28" height="6" fill="#ffffff"/>
+        <rect x="44" y="46" width="28" height="6" fill="#78fc9c"/>
+        <rect x="44" y="58" width="18" height="6" fill="#f0a86c"/>
+      </symbol>
+
+      <!-- Cloud: overlapping circles + bar -->
+      <symbol id="bv-cloud" viewBox="0 0 100 100">
+        <circle cx="38" cy="48" r="18" fill="#c0ccd8"/>
+        <circle cx="60" cy="44" r="22" fill="#c0ccd8"/>
+        <rect x="30" y="56" width="46" height="14" rx="7" fill="#c0ccd8"/>
+        <circle cx="60" cy="44" r="9" fill="#f0a86c"/>
+      </symbol>
+
+      <!-- Bauhaus shape cluster (circle / square / triangle) -->
+      <symbol id="bv-shapes" viewBox="0 0 100 100">
+        <circle cx="28" cy="38" r="18" fill="#f0a86c"/>
+        <rect x="52" y="18" width="34" height="34" fill="#c0ccd8"/>
+        <polygon points="36,92 66,92 51,62" fill="#78fc9c"/>
+      </symbol>
+
+      <!-- Quarter-circle accent (pure decoration) -->
+      <symbol id="bv-quarter" viewBox="0 0 100 100">
+        <path d="M10 90 v-44 a44 44 0 0 1 44 -44 h0 v88 z" fill="#f0a86c"/>
+      </symbol>
+    </defs>
+  </svg><div class="grid"><div class="cell"><svg viewBox="0 0 100 100" width="120" height="120"><use href="#bv-person"/></svg><div class="lbl">bv-person</div></div>
+<div class="cell"><svg viewBox="0 0 100 100" width="120" height="120"><use href="#bv-explorer"/></svg><div class="lbl">bv-explorer</div></div>
+<div class="cell"><svg viewBox="0 0 100 100" width="120" height="120"><use href="#bv-board"/></svg><div class="lbl">bv-board</div></div>
+<div class="cell"><svg viewBox="0 0 100 100" width="120" height="120"><use href="#bv-ideate"/></svg><div class="lbl">bv-ideate</div></div>
+<div class="cell"><svg viewBox="0 0 100 100" width="120" height="120"><use href="#bv-test"/></svg><div class="lbl">bv-test</div></div>
+<div class="cell"><svg viewBox="0 0 100 100" width="120" height="120"><use href="#bv-computer"/></svg><div class="lbl">bv-computer</div></div>
+<div class="cell"><svg viewBox="0 0 100 100" width="120" height="120"><use href="#bv-tree"/></svg><div class="lbl">bv-tree</div></div>
+<div class="cell"><svg viewBox="0 0 100 100" width="120" height="120"><use href="#bv-leaf"/></svg><div class="lbl">bv-leaf</div></div>
+<div class="cell"><svg viewBox="0 0 100 100" width="120" height="120"><use href="#bv-hills"/></svg><div class="lbl">bv-hills</div></div>
+<div class="cell"><svg viewBox="0 0 100 100" width="120" height="120"><use href="#bv-river"/></svg><div class="lbl">bv-river</div></div>
+<div class="cell"><svg viewBox="0 0 100 100" width="120" height="120"><use href="#bv-flower"/></svg><div class="lbl">bv-flower</div></div>
+<div class="cell"><svg viewBox="0 0 100 100" width="120" height="120"><use href="#bv-mountain"/></svg><div class="lbl">bv-mountain</div></div>
+<div class="cell"><svg viewBox="0 0 100 100" width="120" height="120"><use href="#bv-sun"/></svg><div class="lbl">bv-sun</div></div>
+<div class="cell"><svg viewBox="0 0 100 100" width="120" height="120"><use href="#bv-plant"/></svg><div class="lbl">bv-plant</div></div>
+<div class="cell"><svg viewBox="0 0 100 100" width="120" height="120"><use href="#bv-bulb"/></svg><div class="lbl">bv-bulb</div></div>
+<div class="cell"><svg viewBox="0 0 100 100" width="120" height="120"><use href="#bv-building"/></svg><div class="lbl">bv-building</div></div>
+<div class="cell"><svg viewBox="0 0 100 100" width="120" height="120"><use href="#bv-book"/></svg><div class="lbl">bv-book</div></div>
+<div class="cell"><svg viewBox="0 0 100 100" width="120" height="120"><use href="#bv-cloud"/></svg><div class="lbl">bv-cloud</div></div>
+<div class="cell"><svg viewBox="0 0 100 100" width="120" height="120"><use href="#bv-shapes"/></svg><div class="lbl">bv-shapes</div></div>
+<div class="cell"><svg viewBox="0 0 100 100" width="120" height="120"><use href="#bv-quarter"/></svg><div class="lbl">bv-quarter</div></div>
+</div></body></html>
