@@ -30,7 +30,7 @@ Hvorfor vi ikke kan stole blindt på AI-kode, og hvordan vi bygger berettiget ti
 
 #### Del 2 — Beste praksis
 
-Konkrete oppskrifter, de ti bud, lærdommer fra 850+ oppgaver, og et veikart for å komme i gang.
+Konkrete oppskrifter, de ti bud, erfaringer fra reelle prosjekter, og et veikart for å komme i gang.
 
 </div>
 </div>
@@ -259,6 +259,27 @@ Note: E2E-tester kjører hele flyten slik en bruker opplever den. De fanger at a
 
 ---
 
+<span class="kicker">Del 1 · Visuell verifisering</span>
+
+## Visuell verifisering med Playwright
+
+<div class="flow">
+<div class="step">Last side</div>
+<div class="step">Sjekk console-feil</div>
+<div class="step">Ta screenshot</div>
+<div class="step">Verifiser elementer</div>
+</div>
+
+- Frontend kan kompilere og passere enhetstester — og likevel se helt feil ut
+- **Obligatorisk** for frontend-oppgaver
+- Visuell regresjon mot baseline fanger ødelagt layout
+
+<div class="bv-corner bv-bl"><svg class="bv-fig"><use href="#bv-explorer"/></svg></div>
+
+Note: Et naturlig tillegg på toppen av testlagene, spesielt for frontend: koden kan kompilere og passere enhetstester og likevel se helt feil ut. Derfor er visuell verifisering obligatorisk for frontend — last siden, sjekk for console-feil, ta et screenshot og verifiser at kritiske elementer er på plass. Visuell regresjon mot en baseline fanger layout som har knekt.
+
+---
+
 <span class="kicker">Del 1 · CI/CD</span>
 
 ## CI/CD i AI-æraen
@@ -338,27 +359,6 @@ Note: Tradisjonell kodegjennomgang betyr å lese hundrevis av linjer, ofte når 
 
 ---
 
-<span class="kicker">Del 1 · Visuell verifisering</span>
-
-## Visuell verifisering med Playwright
-
-<div class="flow">
-<div class="step">Last side</div>
-<div class="step">Sjekk console-feil</div>
-<div class="step">Ta screenshot</div>
-<div class="step">Verifiser elementer</div>
-</div>
-
-- Frontend kan kompilere og passere enhetstester — og likevel se helt feil ut
-- **Obligatorisk** for frontend-oppgaver
-- Visuell regresjon mot baseline fanger ødelagt layout
-
-<div class="bv-corner bv-bl"><svg class="bv-fig"><use href="#bv-explorer"/></svg></div>
-
-Note: For frontend holder det ikke at koden kompilerer og testene passerer — siden kan fortsatt se ødelagt ut. Derfor er visuell verifisering obligatorisk: last siden, sjekk for console-feil, ta et screenshot og verifiser at kritiske elementer er på plass. Visuell regresjon mot en baseline fanger layout som har knekt.
-
----
-
 <span class="kicker">Del 1 · Konklusjon</span>
 
 ## Tillit gjennom struktur
@@ -415,13 +415,14 @@ Note: Nå som vi vet hvordan vi verifiserer, ser vi på de overordnede prinsippe
 
 ## Fra teori til praksis
 
-- Vi setter rammeverk og prinsipper sammen til konkrete oppskrifter
-- Illustrert med to virkelige prosjekter — **850+ oppgaver** totalt
-- Du får: **de ti bud**, lærdommer fra skala, og et veikart for å komme i gang
+<p class="lead">Ikke en ferdig fasit — «beste praksis» endrer seg ekstremt fort.</p>
+
+- Kjenn fundamentet — så kan teamet velge hvordan dere tilpasser AI best
+- Kjenner du «beste praksis», er det lettere å henge med videre
 
 <div class="bv-corner bv-br"><svg class="bv-fig"><use href="#bv-mountain"/></svg></div>
 
-Note: Del 2 er der teorien møter virkeligheten. Vi bruker to reelle prosjekter med over 850 fullførte oppgaver til sammen som bevis. Du går herfra med de ti bud, konkrete lærdommer og et veikart du kan følge.
+Note: Beste praksis for AI-utvikling er et bevegelig mål — det som gjelder i dag, kan være forandret om noen måneder. Derfor er ikke dette en fasit. Men kjenner du fundamentet, kan teamet ditt selv vurdere hvordan dere bør tilpasse bruken av AI til akkurat dere. Og kjenner du gårsdagens beste praksis, er det mye lettere å henge med på utviklingen videre. Vi starter med et av fundamentene: compounding engineering.
 
 ---
 
@@ -450,7 +451,7 @@ Note: Compounding engineering er at investeringer i prosessen forrenter seg. En 
 
 #### Domeneminne
 
-Skriv `auth.md` én gang → spar 45+ timer på dag 100.
+Skriv `auth.md` én gang → spar timevis med gjentatt forklaring senere.
 
 </div>
 <div class="card">
@@ -462,9 +463,9 @@ En investering som fanger stadig flere bugs over tid.
 </div>
 <div class="card">
 
-#### Task-board
+#### Delt domenespråk
 
-Institusjonell hukommelse — et bibliotek av løsningsmønstre.
+En levende ordliste over domenebegrepene holder AI-ens språk i tråd med vårt — skrevet én gang, brukt overalt.
 
 </div>
 <div class="card">
@@ -476,7 +477,26 @@ Fra «fikset buggen» til «la til en test som forhindrer denne typen bug».
 </div>
 </div>
 
-Note: Konkret ser compounding slik ut: domeneminne du skriver én gang sparer titalls timer senere, testsuiten fanger stadig mer, og task-boardet blir en institusjonell hukommelse. Det viktigste er tankeskiftet — fra å fikse enkeltbugs til å bygge systemer som forhindrer hele klasser av bugs.
+Note: Konkret ser compounding slik ut: domeneminne du skriver én gang sparer titalls timer senere, testsuiten fanger stadig mer, og en delt domeneordliste holder AI-ens begreper i tråd med domenet vårt. Det viktigste er tankeskiftet — fra å fikse enkeltbugs til å bygge systemer som forhindrer hele klasser av bugs.
+
+---
+
+<span class="kicker">Del 2 · Forbedringsløkke</span>
+
+## Kontinuerlig forbedringsløkke
+
+<div class="loop">
+<div class="node"><span class="n">1</span><p>Gjør oppgave med AI</p></div>
+<div class="node"><span class="n">2</span><p>Identifiser friksjon — måtte du forklare flere ganger?</p></div>
+<div class="node"><span class="n">4</span><p>Neste oppgave blir lettere → gjenta</p></div>
+<div class="node"><span class="n">3</span><p>Dokumentér løsningen — som rule, skill eller test</p></div>
+</div>
+
+Dette **er** compounding engineering i praksis. ↻
+
+<div class="bv-corner bv-tr bv-sm"><svg class="bv-fig"><use href="#bv-tree"/></svg></div>
+
+Note: Løkken er enkel: gjør en oppgave, legg merke til friksjonen — måtte du forklare det samme flere ganger? — og dokumentér løsningen som en rule, skill eller test. Neste oppgave blir lettere, og du gjentar. Dette er compounding engineering konkretisert — og broen videre til de ti bud.
 
 ---
 
@@ -499,7 +519,7 @@ Note: De fem første budene handler om disiplin og kvalitetssikring. Du eier ten
 ## De ti bud (fortsettelse)
 
 <ol start="6">
-<li><strong>Bygg domeneminne</strong> — CLAUDE.md, rules-filer, task-boards</li>
+<li><strong>Bygg domeneminne</strong> — CLAUDE.md, rules-filer, domeneordlister</li>
 <li><strong>Bruk RPI religiøst</strong> — Research → Plan → Implement</li>
 <li><strong>Ikke frykt nye sesjoner</strong> — god hygiene, ikke fiasko</li>
 <li><strong>Invester i compounding</strong> — dokumentér mønstre, bygg systemer</li>
@@ -510,40 +530,105 @@ Note: De fem siste handler om systemene rundt arbeidet. Bygg domeneminne, følg 
 
 ---
 
-<span class="kicker">Del 2 · Case study</span>
+<span class="kicker">Del 2 · Erfaringer fra praksis</span>
 
-## Case: Finans-appen
+## Hva som har fungert for oss
 
-<div class="stats">
-<div class="stat"><span class="num">329</span><span class="label">fullførte oppgaver</span></div>
-<div class="stat"><span class="num">11</span><span class="label">skills</span></div>
-<div class="stat"><span class="num">27</span><span class="label">rules</span></div>
+<div class="cards two">
+<div class="card">
+
+#### Lav WIP
+
+Hold 1–2 oppgaver in-progress om gangen — kvaliteten faller når for mye skjer parallelt.
+
+</div>
+<div class="card">
+
+#### Én kilde, alle verktøy
+
+Samme `AGENTS.md` og skills deles (hardlenket) til Claude, Cursor, Codex og Copilot — reglene vedlikeholdes ett sted.
+
+</div>
+<div class="card">
+
+#### Harde regler holder
+
+Eksplisitte «Never Break»-regler blir stort sett respektert — AI bryter dem sjeldnere.
+
+</div>
+<div class="card">
+
+#### Konsistens via skills
+
+Samme dokumenterte prosess hver gang har gitt jevnere kvalitet.
+
+</div>
 </div>
 
-- Stack: React, Node.js, CosmosDB
-- **Virtuelt Kanban fungerer:** fil-basert sporing = perfekt AI-kompatibelt
-- **Skills skaper konsistens:** samme prosess hver gang
-- Lav WIP — 1–2 oppgaver in-progress om gangen
-
-Note: Finans-appen viser metoden i full skala: 329 oppgaver med 11 skills og 27 rules. Den store lærdommen er at et fil-basert, virtuelt Kanban-board passer AI perfekt, at skills gir konsistent prosess hver gang, og at lav WIP holder kvaliteten oppe.
+Note: Dette er erfaringer fra egne prosjekter, ikke en fasit — men noen mønstre har gått igjen. Lav WIP ser ut til å holde kvaliteten oppe, det å dele samme AGENTS.md og skills på tvers av verktøy sparer mye vedlikehold, og eksplisitte «Never Break»-regler blir stort sett respektert. Og en dokumentert prosess via skills har gitt jevnere kvalitet.
 
 ---
 
-<span class="kicker">Del 2 · Case study</span>
+<span class="kicker">Del 2 · Erfaringer fra praksis</span>
 
-## Case: Retrospective.fun
+## Det som deles, vokser
 
-<div class="stats">
-<div class="stat"><span class="num">527+</span><span class="label">fullførte issues</span></div>
-<div class="stat"><span class="num">CQRS</span><span class="label">+ event sourcing</span></div>
+<div class="cards two">
+<div class="card">
+
+#### Del artefaktene
+
+Rules, skills og planer hører hjemme i git — ikke som private notater. Da eier teamet dem sammen, de kan reviewes, og forbedringer kommer alle til gode.
+
+</div>
+<div class="card">
+
+#### Onboarding-gevinst
+
+Det samme domeneminnet som hjelper AI, har også hjulpet nye folk i gang raskere — konteksten ligger allerede skrevet ned.
+
+</div>
 </div>
 
-- Stack: Angular 20, .NET, SignalR
-- **Strenge «Never Break»-regler** → AI bryter dem aldri
-- **TDD som default**, innebygd i arbeidsflyten
-- Issue-filer = komplett dokumentasjon → full sporbarhet
+<p class="lead">Vår erfaring: jo mer vi la i felles filer, jo mindre måtte vi forklare på nytt.</p>
 
-Note: Retrospective.fun er enda større — over 527 issues på en avansert stack med CQRS og event sourcing. Her ser vi at strenge Never Break-regler faktisk respekteres av AI, at TDD bygd inn som default fungerer, og at issue-filer gir full sporbarhet. Skills holder dokumentasjon og implementasjon adskilt.
+<div class="bv-corner bv-tr bv-sm"><svg class="bv-fig"><use href="#bv-book"/></svg></div>
+
+Note: To ting vi ikke så komme i starten. For det første at artefaktene — rules, skills, planer — blir mye mer verdt når de deles i git enn når de ligger lokalt hos én person: teamet eier dem sammen og kan forbedre dem. For det andre at den samme dokumentasjonen som gjør AI bedre, også korter ned onboarding for nye folk. Det er ikke fasit, men det har vært vår erfaring at delt kontekst lønner seg.
+
+---
+
+<span class="kicker">Del 2 · Erfaringer fra praksis</span>
+
+## Lærdommer
+
+<div class="cards">
+<div class="card">
+
+#### Repo-script, ikke rå verktøy
+
+Gi AI ett stabilt grensesnitt — `pnpm check`, `pnpm test` — i stedet for rå verktøy som `tsc` eller `eslint` direkte. Skriptet kapsler inn riktige flagg og stier.
+
+</div>
+<div class="card">
+
+#### Et rydde-pass før du er ferdig
+
+Når koden virker: forenkle først, så luk bort AI-typisk støy — døde sjekker, defensiv kode, støyende kommentarer.
+
+</div>
+<div class="card">
+
+#### Ikke dokumentér alt
+
+Vi `.md`-dokumenterer ikke hver komponent — mye å vedlikeholde, og glemte oppdateringer blir fort til feil.
+
+</div>
+</div>
+
+<div class="bv-corner bv-br bv-sm"><svg class="bv-fig"><use href="#bv-test"/></svg></div>
+
+Note: Tre lærdommer fra praksis. Den første: la AI kjøre repo-scriptene — pnpm check, pnpm test — i stedet for de underliggende «rå» verktøyene direkte, som tsc eller eslint. Skriptet vet allerede riktige flagg og stier, så hver kjøring blir lik. Den andre: legg inn et fast rydde-pass etter at koden virker — først forenkle, så luke bort typisk AI-«slop». Og den tredje, motsatt vei: ikke dokumentér alt i .md-filer — det blir mye å vedlikeholde, og en glemt oppdatering gjør fort at dokumentasjonen lyver.
 
 ---
 
@@ -560,6 +645,8 @@ Note: Retrospective.fun er enda større — over 527 issues på en avansert stac
 | For mange tools / MCP | Minimalisme |
 | Monolittiske oppgaver | Bryt ned i atomiske oppgaver |
 | Ingen test-strategi | TDD, coverage-mål, E2E for kritiske flyter |
+| Rå verktøy-kommandoer feiler | Repo-script: `pnpm check`, `pnpm test` |
+| AI-«slop» blir liggende | Rydde-pass: forenkle, så luk bort støy |
 
 Note: De fleste problemer har et kjent motgift. Lange sesjoner løses med progress-filer og 40 %-regelen, blind tillit med CI/CD og TDD, og monolittiske oppgaver med nedbryting i atomiske biter. Kjenner du symptomet, kjenner du løsningen.
 
@@ -572,7 +659,7 @@ Note: De fleste problemer har et kjent motgift. Lange sesjoner løses med progre
 <div class="timeline">
 <div class="stage"><span class="dot"></span><h4>Dag 1</h4><p>CLAUDE.md: stack, kritiske regler, kommandoer</p></div>
 <div class="stage"><span class="dot"></span><h4>Uke 1</h4><p>Din første rules-fil</p></div>
-<div class="stage"><span class="dot"></span><h4>Måned 1</h4><p>Task-board: PLANNING-BOARD + backlog/done</p></div>
+<div class="stage"><span class="dot"></span><h4>Måned 1</h4><p>Delt domeneordliste (CONTEXT.md)</p></div>
 <div class="stage"><span class="dot"></span><h4>Kvartalet</h4><p>Dokumentér en arbeidsflyt som en skill</p></div>
 </div>
 
@@ -580,26 +667,7 @@ Du trenger ikke alt fra dag én — bygg det opp gradvis.
 
 <div class="bv-corner bv-tr bv-sm"><svg class="bv-fig"><use href="#bv-plant"/></svg></div>
 
-Note: Modningskurven er bevisst overkommelig. Dag én lager du en CLAUDE.md. I løpet av uka din første rules-fil. I løpet av måneden et task-board, og i løpet av kvartalet dokumenterer du en arbeidsflyt som en skill. Du trenger ikke alt på en gang.
-
----
-
-<span class="kicker">Del 2 · Forbedringsløkke</span>
-
-## Kontinuerlig forbedringsløkke
-
-<div class="loop">
-<div class="node"><span class="n">1</span><p>Gjør oppgave med AI</p></div>
-<div class="node"><span class="n">2</span><p>Identifiser friksjon — måtte du forklare flere ganger?</p></div>
-<div class="node"><span class="n">4</span><p>Neste oppgave blir lettere → gjenta</p></div>
-<div class="node"><span class="n">3</span><p>Dokumentér løsningen — som rule, skill eller test</p></div>
-</div>
-
-Dette **er** compounding engineering i praksis. ↻
-
-<div class="bv-corner bv-tr bv-sm"><svg class="bv-fig"><use href="#bv-tree"/></svg></div>
-
-Note: Løkken er enkel: gjør en oppgave, legg merke til friksjonen — måtte du forklare det samme flere ganger? — og dokumentér løsningen som en rule, skill eller test. Neste oppgave blir lettere, og du gjentar. Dette er compounding engineering konkretisert.
+Note: Modningskurven er bevisst overkommelig. Dag én lager du en CLAUDE.md. I løpet av uka din første rules-fil. I løpet av måneden en delt domeneordliste, og i løpet av kvartalet dokumenterer du en arbeidsflyt som en skill. Du trenger ikke alt på en gang.
 
 ---
 
@@ -641,14 +709,12 @@ Note: Dette er reisen samlet på ett bilde. Fra vibe coding til strukturert RPI,
 
 <!-- .slide: class="closing" -->
 
-## Slutt å vibe. Begynn å bygge.
+## Kort oppsummert
 
-AI er en **akselerator for gode prosesser** — ikke en erstatning.
+Verifiser og standardiser. Invester i prosessen.
 
-De som lykkes, dirigerer verktøyene: verken motstand eller blind bruk.
-
-Takk! Spørsmål?
+Takk for oss! Spørsmål?
 
 <div class="bv-scene bv-center"><svg class="bv-fig" style="width:170px"><use href="#bv-mountain"/></svg><svg class="bv-fig" style="width:130px"><use href="#bv-hills"/></svg></div>
 
-Note: Den ene setningen å ta med seg: AI forsterker gode prosesser, men erstatter dem ikke. De som lykkes verken kjemper imot eller stoler blindt — de dirigerer verktøyene. Slutt å vibe, begynn å bygge. Takk for oppmerksomheten — åpner for spørsmål.
+Note: Kort oppsummert: verifiser og standardiser arbeidet, og invester i prosessen så den forrenter seg over tid. Det er det som skiller akselerasjon fra teknisk gjeld. Takk for oppmerksomheten; jeg åpner for spørsmål.
