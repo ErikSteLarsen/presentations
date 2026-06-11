@@ -1,0 +1,50 @@
+- generic [active] [ref=e1]:
+  - generic "Bouvet":
+    - img "Bouvet"
+  - application [ref=e2]:
+    - generic:
+      - generic [ref=e3]:
+        - paragraph [ref=e4]:
+          - generic [ref=e5]: AI-assistert kode · Kapittel 6 & 7
+        - heading "Tillit gjennom struktur" [level=1] [ref=e6]
+        - paragraph [ref=e7]: Verifisering og beste praksis
+        - paragraph [ref=e8]: Fra «vibe coding» til verifisert, skalerbar utvikling
+        - paragraph [ref=e9]: Erik
+        - generic:
+          - img
+          - img
+      - generic:
+        - paragraph:
+          - generic: Agenda
+        - heading [level=2]: Hva vi skal gjennom
+        - generic:
+          - generic:
+            - heading [level=4]: Del 1 — Verifisering og tillit
+            - paragraph: Hvorfor vi ikke kan stole blindt på AI-kode, og hvordan vi bygger berettiget tillit gjennom lagdelt verifisering.
+          - generic:
+            - heading [level=4]: Del 2 — Beste praksis
+            - paragraph: Konkrete oppskrifter, de ti bud, erfaringer fra reelle prosjekter, og et veikart for å komme i gang.
+        - paragraph:
+          - strong: "Mål:"
+          - text: konkrete vaner og struktur du kan ta i bruk fra dag én.
+      - generic:
+        - heading [level=2]: Del 1 · Verifisering og tillit
+        - generic:
+          - img
+          - img
+      - text: → → → → → → → → → → → →
+      - generic:
+        - heading [level=2]: Del 2 · Beste praksis og praktisk anvendelse
+        - generic:
+          - img
+          - img
+      - generic:
+        - heading [level=2]: Takk for oss! Spørsmål?
+        - paragraph: Verifiser og standardiser — invester i prosessen.
+        - generic:
+          - img
+          - img
+    - complementary:
+      - button "next slide" [ref=e13] [cursor=pointer]
+    - text: Speaker notes
+    - generic [ref=e15]: AI-assistert kode · Kapittel 6 & 7 Tillit gjennom struktur Verifisering og beste praksis Fra «vibe coding» til verifisert, skalerbar utvikling Erik

@@ -1,0 +1,108 @@
+- generic [active] [ref=e1]:
+  - generic "Bouvet":
+    - img "Bouvet"
+  - application [ref=e2]:
+    - generic:
+      - generic:
+        - heading [level=2]: Del 1 · Verifisering og tillit
+        - generic:
+          - img
+          - img
+      - text: → → → →
+      - generic:
+        - paragraph:
+          - generic: Del 1 · Pre-commit hooks
+        - heading [level=2]: Slik ser det ut
+        - generic:
+          - code: "// package.json { \"husky\": { \"hooks\": { \"pre-commit\": \"pnpm typecheck && pnpm lint:staged\" } } }"
+        - paragraph: Typecheck og lint kjører automatisk — hver eneste commit.
+      - generic:
+        - paragraph:
+          - generic: Del 1 · Pre-push hooks
+        - heading [level=2]: "Pre-push: hele testsuiten"
+        - generic:
+          - code: "// package.json { \"husky\": { \"hooks\": { \"pre-commit\": \"pnpm typecheck && pnpm lint:staged\", \"pre-push\": \"pnpm typecheck && pnpm test\" } } }"
+        - paragraph: De tyngre sjekkene kjører før koden forlater maskinen.
+      - generic [ref=e3]:
+        - paragraph [ref=e4]:
+          - generic [ref=e5]: Del 1 · Hele flyten
+        - heading "Slik henger det sammen" [level=2] [ref=e6]
+        - generic [ref=e7]:
+          - generic [ref=e8]:
+            - generic [ref=e9]: Under utvikling
+            - generic [ref=e10]:
+              - generic [ref=e11]:
+                - text: Implementasjon
+                - generic [ref=e12]:
+                  - generic [ref=e13]: ↑
+                  - generic [ref=e14]: RPI + AI
+              - generic [ref=e15]:
+                - text: → pre-commit
+                - strong [ref=e16]: typecheck + lint
+              - generic [ref=e17]:
+                - text: → pre-push
+                - strong [ref=e18]: hele testsuiten
+          - generic [ref=e19]:
+            - generic [ref=e20]: →
+            - generic [ref=e21]: git push
+          - generic [ref=e22]:
+            - generic [ref=e23]: CI/CD
+            - generic [ref=e24]:
+              - generic [ref=e25]: TypeScript
+              - generic [ref=e26]: → Lint
+              - generic [ref=e27]: → Enhetstester
+              - generic [ref=e28]: → Integrasjon
+              - generic [ref=e29]: → E2E
+      - generic:
+        - paragraph:
+          - generic: Del 1 · TDD med AI
+        - heading [level=2]: Test-drevet AI-utvikling
+        - generic:
+          - generic:
+            - strong: DU
+            - text: skriver tester (feiler)
+          - generic:
+            - text: →
+            - strong: AI
+            - text: skriver kode (passerer)
+          - generic:
+            - text: →
+            - strong: DU
+            - text: verifiserer & refaktorerer
+        - list:
+          - listitem:
+            - text: Testene er
+            - strong: konkrete mål
+            - text: AI-en skal treffe — verifiser, ikke håp
+          - listitem:
+            - text: Testene er
+            - strong: entydig kommunikasjon
+            - text: — bedre enn «håndter edge cases» i fritekst
+      - generic:
+        - paragraph:
+          - generic: Del 1 · Plan vs. kode
+        - heading [level=2]: Plangjennomgang over kodegjennomgang
+        - generic:
+          - generic:
+            - heading [level=4]: "Tradisjonelt: kodegjennomgang"
+            - paragraph: Les 500+ linjer kode. Timer eller dager per review. Dyrt å snu retning når koden allerede er skrevet.
+          - generic:
+            - heading [level=4]: "Med RPI + AI: plangjennomgang"
+            - paragraph: Gjennomgå ~50 linjer plan. Minutter per review. Fanger feil arkitektur, feil tilnærming og manglende krav — før koden finnes.
+        - paragraph: Verifiser at tilnærmingen er arkitektonisk sunn; la CI/CD ta detaljene.
+      - generic:
+        - heading [level=2]: Del 2 · Beste praksis og praktisk anvendelse
+        - generic:
+          - img
+          - img
+      - generic:
+        - heading [level=2]: Takk for oss! Spørsmål?
+        - paragraph: Verifiser og standardiser — invester i prosessen.
+        - generic:
+          - img
+          - img
+    - complementary:
+      - button "previous slide" [ref=e33] [cursor=pointer]
+      - button "next slide" [ref=e35] [cursor=pointer]
+    - text: Speaker notes
+    - generic [ref=e37]: Del 1 · Hele flyten Slik henger det sammen Under utvikling Implementasjon ↑ RPI + AI pre-commit typecheck + lint pre-push hele testsuiten → git push CI/CD TypeScript Lint Enhetstester Integrasjon E2E

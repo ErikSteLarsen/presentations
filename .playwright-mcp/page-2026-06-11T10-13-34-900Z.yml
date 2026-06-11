@@ -1,0 +1,130 @@
+- generic [active] [ref=e1]:
+  - generic "Bouvet":
+    - img "Bouvet"
+  - application [ref=e2]:
+    - generic:
+      - generic:
+        - heading [level=2]: Del 1 · Verifisering og tillit
+        - generic:
+          - img
+          - img
+      - text: → → → → → → → → → → → →
+      - generic:
+        - paragraph:
+          - generic: Del 1 · Plan vs. kode
+        - heading [level=2]: Plangjennomgang over kodegjennomgang
+        - generic:
+          - generic:
+            - heading [level=4]: "Tradisjonelt: kodegjennomgang"
+            - paragraph: Les 500+ linjer kode. Timer eller dager per review. Dyrt å snu retning når koden allerede er skrevet.
+          - generic:
+            - heading [level=4]: "Med RPI + AI: plangjennomgang"
+            - paragraph: Gjennomgå ~50 linjer plan. Minutter per review. Fanger feil arkitektur, feil tilnærming og manglende krav — før koden finnes.
+        - paragraph: Verifiser at tilnærmingen er arkitektonisk sunn; la CI/CD ta detaljene.
+      - generic:
+        - paragraph:
+          - generic: Del 1 · RPI, oppdatert
+        - heading [level=2]: "Oppdatert RPI: Planen alene er ikke nok"
+        - generic:
+          - generic:
+            - heading [level=4]: Opprinnelig RPI
+            - paragraph: «Gjennomgå planen, ikke koden.» 50 linjer plan slår 500 linjer kode.
+          - generic: →
+          - generic:
+            - heading [level=4]: Nyere RPI (2026)
+            - paragraph:
+              - text: En overbevisende plan kan skjule feil tekniske antakelser. Kodegjennomgang er
+              - strong: obligatorisk igjen
+              - text: — men lettere, fordi mer avklares før koden skrives.
+        - paragraph:
+          - text: "Avklaringen flyttes tidligere og deles opp:"
+          - strong: Spørsmål → Research → Design → Struktur → Plan
+          - text: — da blir kodegjennomgangen rask, ikke overflødig.
+        - blockquote: «Plans that read well don't necessarily build well.» — Dexter Horthy, «Everything We Got Wrong» (2026)
+      - generic [ref=e3]:
+        - paragraph [ref=e4]:
+          - generic [ref=e5]: Del 1 · Hele flyten
+        - heading "Review lukker sløyfa" [level=2] [ref=e6]
+        - generic [ref=e7]:
+          - generic [ref=e8]:
+            - generic [ref=e9]:
+              - generic [ref=e10]: Under utvikling
+              - generic [ref=e11]:
+                - generic [ref=e12]:
+                  - generic [ref=e13]: RPI + AI
+                  - generic [ref=e14]:
+                    - generic [ref=e15]: Plan-review
+                    - generic [ref=e16]: → Implementasjon
+                - generic [ref=e17]:
+                  - text: → pre-commit
+                  - strong [ref=e18]: typecheck
+                - generic [ref=e19]:
+                  - text: → pre-push
+                  - strong [ref=e20]: testsuite
+            - generic [ref=e21]:
+              - generic [ref=e22]: →
+              - generic [ref=e23]: git push
+            - generic [ref=e24]:
+              - generic [ref=e25]: CI/CD
+              - generic [ref=e26]:
+                - generic [ref=e27]: TypeScript
+                - generic [ref=e28]: → Lint
+                - generic [ref=e29]: → Enhetstester
+                - generic [ref=e30]: → Integrasjon
+                - generic [ref=e31]: → E2E
+          - generic [ref=e34]: ↓
+          - generic [ref=e36]:
+            - generic [ref=e37]: Review · etter CI/CD
+            - generic [ref=e38]:
+              - generic [ref=e39]: AI kode- & feature-review
+              - generic [ref=e40]: → Human review
+      - generic:
+        - paragraph:
+          - generic: Del 1 · Konklusjon
+        - heading [level=2]: Tillit gjennom struktur
+        - generic:
+          - generic:
+            - heading [level=4]: Blind tillit
+            - paragraph: «AI-en vet best» → bugs, sikkerhetshull, teknisk gjeld → mistillit over tid.
+          - generic: →
+          - generic:
+            - heading [level=4]: Verifisert tillit
+            - paragraph: «AI-en har bevist det» → tester grønne, CI/CD grønn, plan godkjent → tillit som vokser.
+        - blockquote:
+          - paragraph: «Trust in AI isn't about faith. It's about verification.»
+      - generic:
+        - paragraph:
+          - generic: Del 1 · Oppsummering
+        - heading [level=2]: Nøkkelpunkter — Del 1
+        - list:
+          - listitem:
+            - strong: "Tillitsunderskuddet:"
+            - text: mange stoler ikke på AI — og det er rasjonelt
+          - listitem:
+            - strong: "Verifiseringspyramiden:"
+            - text: lag på lag av forsvar
+          - listitem:
+            - strong: "CI/CD er kritisk:"
+            - text: automatiser og fail fast
+          - listitem:
+            - strong: "TDD med AI:"
+            - text: du skriver testene, AI implementerer
+          - listitem:
+            - strong: "Plangjennomgang:"
+            - text: 50 linjer plan > 500 linjer kode
+      - generic:
+        - heading [level=2]: Del 2 · Beste praksis og praktisk anvendelse
+        - generic:
+          - img
+          - img
+      - generic:
+        - heading [level=2]: Takk for oss! Spørsmål?
+        - paragraph: Verifiser og standardiser — invester i prosessen.
+        - generic:
+          - img
+          - img
+    - complementary:
+      - button "previous slide" [ref=e44] [cursor=pointer]
+      - button "next slide" [ref=e46] [cursor=pointer]
+    - text: Speaker notes
+    - generic [ref=e48]: Del 1 · Hele flyten Review lukker sløyfa Under utvikling RPI + AI Plan-review Implementasjon pre-commit typecheck pre-push testsuite → git push CI/CD TypeScript Lint Enhetstester Integrasjon E2E ↓ Review · etter CI/CD AI kode- & feature-review Human review
