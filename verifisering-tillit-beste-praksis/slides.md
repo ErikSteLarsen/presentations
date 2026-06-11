@@ -10,7 +10,7 @@ Erik
 
 <div class="bv-scene bv-center"><svg class="bv-fig" style="width:170px"><use href="#bv-hills"/></svg><svg class="bv-fig" style="width:120px"><use href="#bv-tree"/></svg></div>
 
-Note: Velkommen. Denne presentasjonen handler om hvordan vi går fra å håpe at AI-generert kode er riktig, til å vite det. Vi bygger på kapittel 6 og 7 i RPI-metoden — Research, Plan, Implement. Målet er tillit gjennom struktur, ikke blind tro.
+Note: Velkommen! Kort om hva dette handler om: hvordan vi går fra å håpe at AI-generert kode er riktig, til å faktisk vite det. Jeg bygger på kapittel 6 og 7 fra RPI-metoden — Research, Plan, Implement. Den røde tråden gjennom alt sammen er tittelen: tillit gjennom struktur, ikke blind tro.
 
 ---
 
@@ -35,9 +35,9 @@ Konkrete oppskrifter, de ti bud, erfaringer fra reelle prosjekter, og et veikart
 </div>
 </div>
 
-**Mål:** konkrete vaner du kan ta i bruk fra dag én.
+**Mål:** konkrete vaner og struktur du kan ta i bruk fra dag én.
 
-Note: To deler. Først det teoretiske fundamentet for verifisering og tillit, deretter den praktiske anvendelsen. Poenget er ikke abstrakte prinsipper, men vaner du kan ta i bruk umiddelbart.
+Note: Vi går gjennom to deler. Først bygger vi det teoretiske fundamentet — verifisering og tillit. Så går vi over på det praktiske: konkrete oppskrifter, de ti bud, erfaringer fra reelle prosjekter og et veikart for å komme i gang. Det viktigste for meg er at dere går herfra med vaner dere kan ta i bruk allerede fra dag én, ikke bare abstrakte prinsipper.
 
 ---
 
@@ -47,7 +47,7 @@ Note: To deler. Først det teoretiske fundamentet for verifisering og tillit, de
 
 <div class="bv-scene bv-center"><svg class="bv-fig" style="width:150px"><use href="#bv-explorer"/></svg><svg class="bv-fig" style="width:120px"><use href="#bv-leaf"/></svg></div>
 
-Note: Vi starter med det grunnleggende spørsmålet — hvordan kan vi stole på kode vi ikke har skrevet selv?
+Note: Vi starter med det helt grunnleggende spørsmålet: hvordan kan vi stole på kode vi ikke har skrevet selv?
 
 ---
 
@@ -67,7 +67,7 @@ Note: Vi starter med det grunnleggende spørsmålet — hvordan kan vi stole på
 
 <div class="bv-corner bv-br bv-sm"><svg class="bv-fig"><use href="#bv-computer"/></svg></div>
 
-Note: Når AI lar oss produsere mange ganger mer kode, skalerer ikke bare produktiviteten — også risikoen og vedlikeholdsbyrden vokser tilsvarende. Det som før var en god vane blir nå avgjørende for å overleve. Hele resten av presentasjonen bygger på dette ene poenget.
+Note: Poenget her er enkelt: når AI lar oss lage mange ganger så mye kode, skalerer ikke bare produktiviteten — også risikoen og vedlikeholdsbyrden vokser like mye. Fem ganger mer kode betyr fem ganger mer som kan gå galt. Det som før var en god vane, blir nå kritisk for å overleve. Hele resten av presentasjonen henger på dette ene poenget.
 
 ---
 
@@ -86,7 +86,7 @@ Note: Når AI lar oss produsere mange ganger mer kode, skalerer ikke bare produk
 
 <div class="bv-corner bv-br"><svg class="bv-fig"><use href="#bv-ideate"/></svg></div>
 
-Note: De fleste bruker AI, men de fleste stoler ikke på resultatet. Det er ikke irrasjonelt — det er sunn skepsis. Kjernen er at modellen ofte mangler full kontekst om prosjektet vårt. Løsningen er ikke mer blind tro, men strukturer som gjør tilliten berettiget.
+Note: Tallene forteller en interessant historie: de aller fleste bruker AI, men nesten like mange stoler ikke på det de får ut. Og det er faktisk ikke irrasjonelt — det er sunn skepsis. Hovedårsaken er at modellen ofte mangler full kontekst om akkurat vårt prosjekt. Svaret er ikke mer blind tro, men strukturer som gjør tilliten berettiget — for dette underskuddet forsvinner ikke av seg selv.
 
 ---
 
@@ -97,9 +97,9 @@ Note: De fleste bruker AI, men de fleste stoler ikke på resultatet. Det er ikke
 <div class="cards two">
 <div class="card">
 
-#### Subtile feil
+#### Subtile feil / Edge cases
 
-Kompilerer og ser riktig ut, men feiler under spesifikke forhold.
+Kompilerer og ser riktig ut, men feiler under forhold du ikke nevnte.
 
 </div>
 <div class="card">
@@ -111,23 +111,23 @@ Gjenskaper usikre mønstre fra treningsdataene.
 </div>
 <div class="card">
 
-#### Arkitektonisk inkoherens
+#### Feil mønstre
 
-Bryter prosjektets etablerte mønstre.
+Bruker utdaterte mønstre og bryter prosjektets konvensjoner — fordi den ikke kjenner hele kodebasen din.
 
 </div>
 <div class="card">
 
-#### Utelatelser
+#### Overkomplisering
 
-Glemmer edge cases du ikke nevnte.
+Legger til abstraksjoner og kode du ikke ba om.
 
 </div>
 </div>
 
 Poenget er ikke å slutte med AI — men å bygge tillit som er *berettiget*.
 
-Note: AI-kode feiler på måter som er vanskeligere å oppdage enn vanlige feil, fordi den ofte ser helt riktig ut. Den kan gjenskape usikre mønstre, bryte arkitekturen din, eller glemme tilfeller du ikke eksplisitt nevnte. Konklusjonen er ikke å unngå AI, men å verifisere systematisk.
+Note: AI-kode feiler på måter som er vanskeligere å oppdage enn vanlige feil, nettopp fordi den ofte ser helt riktig ut. Fire typiske feilmodi: subtile feil og edge cases du ikke nevnte, sikkerhetshull den har lært fra treningsdataene, feil mønstre fordi den ikke kjenner hele kodebasen din, og rett og slett overkomplisering — kode og abstraksjoner du aldri ba om. Konklusjonen er ikke å slutte med AI, men å verifisere systematisk.
 
 ---
 
@@ -143,9 +143,9 @@ Note: AI-kode feiler på måter som er vanskeligere å oppdage enn vanlige feil,
 <div class="tier t5">Kode- & plangjennomgang</div>
 </div>
 
-Lag på lag av forsvar — fra rask, automatisk sjekk nederst til menneskelig vurdering på toppen.
+Lag på lag av forsvar — menneskelig vurdering legger fundamentet, automatiske tester bygger oppå.
 
-Note: Tenk på verifisering som en pyramide. Nederst ligger den brede, billige og automatiske foundasjonen — statisk analyse og gjennomgang. Jo høyere opp, jo nærmere den fullstendige brukeropplevelsen kommer vi, men også tregere og dyrere. Ingen enkelt lag er nok alene.
+Note: Tenk på verifisering som en pyramide. Nederst ligger det brede, billige fundamentet — menneskelig plan- og kodegjennomgang, som fanger de dyreste feilene før koden i det hele tatt skrives. Oppå det bygger de automatiske lagene: statisk analyse, enhetstester, integrasjonstester og E2E. Jo høyere opp, jo nærmere ekte bruk kommer vi — men også tregere og dyrere. Poenget er at ingen enkelt lag holder alene; det er lagene til sammen som gir trygghet. Nå går vi gjennom dem ett for ett, nedenfra og opp.
 
 ---
 
@@ -153,7 +153,7 @@ Note: Tenk på verifisering som en pyramide. Nederst ligger den brede, billige o
 
 ## Kode- & plangjennomgang
 
-<p class="lead">Menneskelig vurdering — fanger feilene maskiner ikke ser.</p>
+<p class="lead">Viktig steg ved bruk av AI – med ekstra fokus på plangjennomgang.</p>
 
 - **Fanger:** feil arkitektur, feil tilnærming, manglende krav
 - **Eksempel:** koden er feilfri, men løser feil problem
@@ -167,7 +167,7 @@ Note: Tenk på verifisering som en pyramide. Nederst ligger den brede, billige o
 <div class="tier t5">Kode- & plangjennomgang</div>
 </div>
 
-Note: Fundamentet i pyramiden er menneskelig gjennomgang av plan og kode. Dette laget fanger de dyreste feilene — feil arkitektur eller feil tilnærming — som ingen test ville oppdaget, fordi koden teknisk sett kan være perfekt. Retter du det på plan-stadiet, sparer du mest.
+Note: Lag én, fundamentet, er menneskelig gjennomgang av både plan og kode. Dette laget fanger de dyreste feilene — feil arkitektur eller feil tilnærming — som ingen test ville oppdaget, fordi koden teknisk sett kan være helt feilfri og likevel løse feil problem. Og det er nettopp her det er billigst å rette: før en eneste linje er skrevet.
 
 ---
 
@@ -189,7 +189,7 @@ Note: Fundamentet i pyramiden er menneskelig gjennomgang av plan og kode. Dette 
 <div class="tier t5 dim">Kode- & plangjennomgang</div>
 </div>
 
-Note: Statisk analyse — TypeScript og lint — er det raskeste laget. Det fanger skrivefeil og typefeil før koden i det hele tatt kjøres, på millisekunder. Billig, automatisk og alltid på.
+Note: Lag to er statisk analyse — kompilatoren og linteren, altså TypeScript og lint. Det fanger syntaks-, type- og skrivefeil før koden i det hele tatt kjøres — som «user.nmae» i stedet for «user.name». Det går på millisekunder, er helautomatisk og alltid på.
 
 ---
 
@@ -211,7 +211,7 @@ Note: Statisk analyse — TypeScript og lint — er det raskeste laget. Det fang
 <div class="tier t5 dim">Kode- & plangjennomgang</div>
 </div>
 
-Note: Enhetstester sjekker logikken i enkeltfunksjoner isolert. Når en feiler, vet du nøyaktig hvor problemet er. Raske å kjøre og presise i diagnosen — ryggraden i en god testsuite.
+Note: Lag tre er enhetstester, som sjekker logikken i enkeltfunksjoner isolert — for eksempel en skatteberegning som gir feil sum. Når en enhetstest feiler, vet du nesten nøyaktig hvor problemet ligger. De er raske og presise, og utgjør ryggraden i en god testsuite.
 
 ---
 
@@ -233,7 +233,7 @@ Note: Enhetstester sjekker logikken i enkeltfunksjoner isolert. Når en feiler, 
 <div class="tier t5 dim">Kode- & plangjennomgang</div>
 </div>
 
-Note: Integrasjonstester fanger feil som oppstår i koblingen mellom komponenter — der hver del fungerer alene, men ikke sammen. Et klassisk eksempel er at API-et returnerer riktig data, men frontend tolker eller viser den feil.
+Note: Lag fire er integrasjonstester, som fanger feilene i samspillet mellom komponenter — der hver del fungerer fint alene, men ikke sammen. Det klassiske eksempelet er at API-et leverer helt riktig data, men frontend viser den ikke. Hver del kan altså være korrekt, og likevel knirker koblingen.
 
 ---
 
@@ -255,28 +255,7 @@ Note: Integrasjonstester fanger feil som oppstår i koblingen mellom komponenter
 <div class="tier t5 dim">Kode- & plangjennomgang</div>
 </div>
 
-Note: E2E-tester kjører hele flyten slik en bruker opplever den. De fanger at alt henger sammen ende-til-ende, men er tregere og sier mindre om hvor feilen ligger. Derfor toppen av pyramiden — verdifullt, men ikke noe du baserer alt på.
-
----
-
-<span class="kicker">Del 1 · Visuell verifisering</span>
-
-## Visuell verifisering med Playwright
-
-<div class="flow">
-<div class="step">Last side</div>
-<div class="step">Sjekk console-feil</div>
-<div class="step">Ta screenshot</div>
-<div class="step">Verifiser elementer</div>
-</div>
-
-- Frontend kan kompilere og passere enhetstester — og likevel se helt feil ut
-- **Obligatorisk** for frontend-oppgaver
-- Visuell regresjon mot baseline fanger ødelagt layout
-
-<div class="bv-corner bv-bl"><svg class="bv-fig"><use href="#bv-explorer"/></svg></div>
-
-Note: Et naturlig tillegg på toppen av testlagene, spesielt for frontend: koden kan kompilere og passere enhetstester og likevel se helt feil ut. Derfor er visuell verifisering obligatorisk for frontend — last siden, sjekk for console-feil, ta et screenshot og verifiser at kritiske elementer er på plass. Visuell regresjon mot en baseline fanger layout som har knekt.
+Note: Øverst, lag fem, ligger E2E-testene. De følger hele brukerflyten slik en ekte bruker opplever den — for eksempel om brukeren faktisk får fullført en checkout. De gir bredest dekning, men er tregest og sier minst om akkurat hvor feilen ligger. Derfor toppen av pyramiden: verdifullt, men ikke noe du baserer alt på.
 
 ---
 
@@ -292,11 +271,11 @@ Note: Et naturlig tillegg på toppen av testlagene, spesielt for frontend: koden
 <div class="step">E2E<br><strong>5 min</strong></div>
 </div>
 
-- 5× mer kode krever 5× bedre verifisering — manuell review skalerer ikke
+- Mer (AI-skrevet) kode krever mer og bedre verifisering — manuell review skalerer ikke
 - **Fail fast, fail loud:** kjør de billigste sjekkene først
 - Feil oppdaget tidlig = rask, billig tilbakemelding
 
-Note: Manuell gjennomgang skalerer ikke når kodemengden femdobles — pipelines gjør det. Nøkkelprinsippet er fail fast: kjør de raskeste og billigste sjekkene først, så en typefeil stopper deg etter to sekunder i stedet for fem minutter. Tidlig feil betyr rask feedback.
+Note: Så til hvordan vi binder lagene sammen. Manuell gjennomgang skalerer ikke når kodemengden femdobles — men pipelines gjør det. Nøkkelprinsippet er «fail fast»: kjør de raskeste og billigste sjekkene først, slik at en typefeil stopper deg etter to sekunder i stedet for fem minutter. Jo tidligere feilen oppdages, jo raskere og billigere er tilbakemeldingen.
 
 ---
 
@@ -308,10 +287,127 @@ Note: Manuell gjennomgang skalerer ikke når kodemengden femdobles — pipelines
 - Fang trivielle feil lokalt, på sekunder
 - Enda kortere feedback-løkke enn CI/CD alene
 - CI/CD blir sikkerhetsnettet, ikke førstelinjen
+- Gjelder også **AI-en:** kjører den `git commit`, må den gjennom de samme sjekkene
 
 <div class="bv-corner bv-br"><svg class="bv-fig"><use href="#bv-test"/></svg></div>
 
-Note: Pre-commit hooks flytter de raskeste sjekkene helt frem til commit-øyeblikket. Du fanger trivielle feil før de i det hele tatt når repoet. Det gir den korteste mulige feedback-løkken, og lar CI/CD være sikkerhetsnettet i stedet for førstelinjeforsvaret.
+Note: Pre-commit-hooks flytter de raskeste sjekkene helt frem til commit-øyeblikket — typecheck og lint før commit, ikke etter push. Du fanger de trivielle feilene lokalt, på sekunder, før de i det hele tatt når repoet. Det gir en enda kortere feedback-løkke enn CI/CD alene, og lar CI/CD være sikkerhetsnettet i stedet for førstelinjeforsvaret. Og dette gjelder ikke bare mennesket: når AI-agenten selv kjører `git commit`, treffer den nøyaktig de samme hookene — den slipper ikke unna verifiseringen, og kan ikke committe kode som ikke passerer typecheck og lint.
+
+---
+
+<span class="kicker">Del 1 · Pre-commit hooks</span>
+
+## Slik ser det ut
+
+<style>
+.reveal pre { background: var(--c-white); padding: 0.8em 1em; }
+.reveal pre code, .reveal pre code * { color: var(--c-ink) !important; background: transparent !important; }
+</style>
+
+```json
+// package.json
+{
+  "husky": {
+    "hooks": {
+      "pre-commit": "pnpm typecheck && pnpm lint:staged"
+    }
+  }
+}
+```
+
+<p class="lead">Typecheck og lint kjører automatisk — hver eneste commit.</p>
+
+Note: Slik ser det konkret ut med Husky — hele oppsettet ligger i package.json. Før hver commit kjøres typecheck og lint på de stagede filene, og commit-en stoppes hvis noe feiler. Poenget er at ingen lenger er avhengig av å huske å kjøre sjekkene — de er bakt inn i arbeidsflyten.
+
+---
+
+<span class="kicker">Del 1 · Pre-push hooks</span>
+
+## Pre-push: hele testsuiten
+
+```json
+// package.json
+{
+  "husky": {
+    "hooks": {
+      "pre-commit": "pnpm typecheck && pnpm lint:staged",
+      "pre-push": "pnpm typecheck && pnpm test"
+    }
+  }
+}
+```
+
+<p class="lead">De tyngre sjekkene kjører før koden forlater maskinen.</p>
+
+Note: Pre-push-hooken er det siste lokale forsvaret før koden går til remote. Her har vi råd til de tyngre sjekkene: full typecheck og hele testsuiten med «pnpm test». Mislykkes noe, stoppes pushen. Arbeidsdelingen er hele poenget — raske sjekker på hver commit, den tunge suiten på push — så du verken venter unødig ofte eller pusher noe ødelagt.
+
+---
+
+<span class="kicker">Del 1 · Hele flyten</span>
+
+## Slik henger det sammen
+
+<style>
+.reveal .flowmap { display: flex; align-items: stretch; gap: 0.55em; margin: 1.1em -3% 0.6em; }
+.reveal .flowmap .phase {
+  display: flex; flex-direction: column;
+  border: 2px dashed var(--c-line); border-radius: 18px;
+  background: var(--c-cream); padding: 0.55em 0.8em 0.85em;
+}
+.reveal .flowmap .phase-label {
+  text-align: center; font-size: 0.42em; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.1em;
+  color: var(--c-skyink); margin-bottom: 0.45em;
+}
+.reveal .flowmap .phase .flow { margin: auto 0; }
+.reveal .flowmap .flow .step {
+  font-size: 0.46em; padding: 0.6em 0.45em; line-height: 1.25;
+  overflow-wrap: normal; hyphens: manual;
+}
+.reveal .flowmap .flow .step + .step { margin-left: 1.5em; }
+.reveal .flowmap .flow .step + .step::before { left: -0.82em; font-size: 1.45em; font-weight: 800; color: var(--c-skyink); }
+.reveal .flowmap .step.rpi-anchor { position: relative; }
+.reveal .flowmap .ai-note {
+  position: absolute; top: calc(100% + 1.1em); left: 50%; transform: translateX(-50%);
+  display: flex; flex-direction: column; align-items: center; line-height: 1.1;
+  color: var(--c-skyink); font-weight: 800; white-space: nowrap;
+}
+.reveal .flowmap .ai-note .up { font-size: 2.4em; line-height: 0.7; }
+.reveal .flowmap .ai-note .lbl { font-size: 1.35em; letter-spacing: 0.02em; }
+.reveal .flowmap .bigarrow {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  color: var(--c-skyink); font-weight: 800; line-height: 1;
+}
+.reveal .flowmap .bigarrow .ar { font-size: 2em; }
+.reveal .flowmap .bigarrow .lbl {
+  font-size: 0.36em; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.06em; margin-top: 0.3em;
+}
+</style>
+
+<div class="flowmap">
+<div class="phase" style="flex:3">
+<span class="phase-label">Under utvikling</span>
+<div class="flow">
+<div class="step rpi-anchor">Implemen&shy;tasjon<span class="ai-note"><span class="up">↑</span><span class="lbl">RPI + AI</span></span></div>
+<div class="step">pre-commit<br><strong>typecheck + lint</strong></div>
+<div class="step">pre-push<br><strong>hele testsuiten</strong></div>
+</div>
+</div>
+<div class="bigarrow"><span class="ar">→</span><span class="lbl">git push</span></div>
+<div class="phase" style="flex:5">
+<span class="phase-label">CI/CD</span>
+<div class="flow">
+<div class="step">TypeScript</div>
+<div class="step">Lint</div>
+<div class="step">Enhets&shy;tester</div>
+<div class="step">Integra&shy;sjon</div>
+<div class="step">E2E</div>
+</div>
+</div>
+</div>
+
+Note: La oss zoome ut og se hele flyten under ett. Den deler seg foreløpig i to bolker. Først «under utvikling»: alt som skjer lokalt på maskinen din mens koden blir til. Her er pre-commit og pre-push den løpende verifiseringen etter hver implementasjon — de raske sjekkene på commit, den tunge testsuiten på push. Når koden så forlater maskinen, tar CI/CD over som én samlet bolk — hele pipelinen fra typecheck til E2E, sikkerhetsnettet som fanger det som måtte slippe gjennom lokalt. Poenget er at verifiseringen er kontinuerlig og lagdelt gjennom hele løpet, ikke en engangssjekk på slutten.
 
 ---
 
@@ -320,15 +416,15 @@ Note: Pre-commit hooks flytter de raskeste sjekkene helt frem til commit-øyebli
 ## Test-drevet AI-utvikling
 
 <div class="flow">
-<div class="step"><strong>DU</strong><br>skriver test<br>(feiler)</div>
+<div class="step"><strong>DU</strong><br>skriver tester<br>(feiler)</div>
 <div class="step"><strong>AI</strong><br>skriver kode<br>(passerer)</div>
 <div class="step"><strong>DU</strong><br>verifiserer &amp;<br>refaktorerer</div>
 </div>
 
-- Testen er et **konkret mål** AI-en skal treffe — verifiser, ikke håp
-- Testen er **entydig kommunikasjon** — bedre enn «håndter edge cases» i prosa
+- Testene er **konkrete mål** AI-en skal treffe — verifiser, ikke håp
+- Testene er **entydig kommunikasjon** — bedre enn «håndter edge cases» i fritekst
 
-Note: TDD snur arbeidsflyten: du skriver testen som feiler, AI skriver koden som får den til å passere, og du verifiserer og refaktorerer. Testen blir både et konkret, målbart mål og en entydig spesifikasjon. Det er langt mer presist enn å be om at AI «håndterer edge cases» i fritekst.
+Note: TDD snur arbeidsflyten på hodet: du skriver testen som feiler først, AI skriver koden som får den til å passere, og så verifiserer og refaktorerer du. Testen blir både et konkret, målbart mål AI-en skal treffe, og en helt entydig spesifikasjon. Det er mye mer presist enn å be AI om å «håndtere edge cases» i fritekst.
 
 ---
 
@@ -355,7 +451,125 @@ Gjennomgå ~50 linjer plan. Minutter per review. Fanger feil arkitektur, feil ti
 
 Verifiser at tilnærmingen er arkitektonisk sunn; la CI/CD ta detaljene.
 
-Note: Tradisjonell kodegjennomgang betyr å lese hundrevis av linjer, ofte når det er for sent å snu. Med RPI gjennomgår du i stedet en kort plan på rundt femti linjer. Du fanger de dyre feilene — feil arkitektur eller tilnærming — på minutter, før en eneste linje kode er skrevet.
+Note: Tradisjonell kodegjennomgang betyr å lese hundrevis av linjer, ofte når det allerede er for sent å snu retning. Med RPI gjennomgår du i stedet en kort plan på rundt femti linjer. Da fanger du de dyre feilene — feil arkitektur eller feil tilnærming — på minutter, før en eneste linje kode er skrevet. La heller CI/CD ta detaljene.
+
+---
+
+<span class="kicker">Del 1 · RPI, oppdatert</span>
+
+## Oppdatert RPI: Planen alene er ikke nok
+
+<div class="contrast">
+<div class="panel from">
+
+#### Opprinnelig RPI
+
+«Gjennomgå planen, ikke koden.» 50 linjer plan slår 500 linjer kode.
+
+</div>
+<div class="arrow">→</div>
+<div class="panel to">
+
+#### Nyere RPI (2026)
+
+En overbevisende plan kan skjule feil tekniske antakelser. Kodegjennomgang er **obligatorisk igjen** — men lettere, fordi mer avklares før koden skrives.
+
+</div>
+</div>
+
+<p style="font-size:0.82em">Avklaringen flyttes tidligere og deles opp: <strong>Spørsmål → Research → Design → Struktur → Plan</strong> — da blir kodegjennomgangen rask, ikke overflødig.</p>
+
+<blockquote style="font-size:0.74em; margin:0.9rem 0 0">«Plans that read well don't necessarily build well.»<br><span style="opacity:.75">— Dexter Horthy, «Everything We Got Wrong» (2026)</span></blockquote>
+
+Note: Dette er en viktig oppdatering fra mannen bak RPI, Dexter Horthy i HumanLayer. Opprinnelig var rådet å lese planen i stedet for koden — en kort plan er lettere å vurdere enn tusenvis av linjer. Men etter et år i produksjon innrømte han i foredraget «Everything We Got Wrong» at det var for enkelt: en plan kan lese godt og likevel bygge dårlig, fordi den skjuler feil tekniske antakelser — og teamet måtte rive ut og bygge om store deler av systemet. Løsningen var ikke å droppe plangjennomgang, men å flytte avklaringen enda tidligere og dele den opp i flere små steg, og samtidig gjøre kodegjennomgang obligatorisk igjen — bare lettere, fordi det meste allerede er avklart.
+
+---
+
+<span class="kicker">Del 1 · Hele flyten</span>
+
+## Review lukker sløyfa
+
+<style>
+/* scoped to this slide so the other flow slide is untouched */
+.reveal .rev2 .flowmap { margin: 1.1em -12% 0.7em; }
+.reveal .rev2 .flowmap .phase { padding: 0.65em 0.9em 1em; }
+.reveal .rev2 .flowmap .flow .step { padding: 0.95em 0.7em; line-height: 1.35; font-size: 0.42em; }
+.reveal .rev2 .flowmap .flow .step + .step { margin-left: 1.3em; }
+.reveal .rev2 .flowmap .flow .step + .step::before { left: -0.72em; }
+.reveal .rev2 .flowmap .flow .step.review { background: #e7f4ee; }
+
+/* RPI + AI: light labelled group around plan-review + implementasjon */
+.reveal .rev2 .flowmap .flow .rpigroup {
+  flex: 2.1; display: flex; flex-direction: column;
+  border: 1.5px solid var(--c-skyink); border-radius: 14px;
+  background: rgba(201,111,46,0.05); padding: 0.4em 0.55em 0.55em;
+}
+.reveal .rev2 .flowmap .flow .rpigroup .rpilabel {
+  text-align: center; font-size: 0.38em; font-weight: 800; color: var(--c-skyink);
+  text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.45em;
+}
+.reveal .rev2 .flowmap .flow .rpigroup .rpiinner { display: flex; flex: 1; }
+.reveal .rev2 .flowmap .flow .rpigroup .rpiinner .step + .step { margin-left: 1.1em; }
+.reveal .rev2 .flowmap .flow .rpigroup .rpiinner .step + .step::before { left: -0.62em; font-size: 1.2em; }
+.reveal .rev2 .flowmap .flow .rpigroup + .step { margin-left: 1.3em; position: relative; }
+.reveal .rev2 .flowmap .flow .rpigroup + .step::before {
+  content: '→'; position: absolute; left: -0.72em; top: 50%; transform: translateY(-50%);
+  color: var(--c-skyink); font-weight: 800; font-size: 1.45em;
+}
+
+/* slim down-arrow + review row right under CI/CD */
+.reveal .rev2 .downconn { display: flex; justify-content: flex-end; margin: 0.55em -12% 0; }
+.reveal .rev2 .downconn .col { flex: 0 0 58%; display: flex; align-items: center; justify-content: center; }
+.reveal .rev2 .downconn .ar { font-size: 1.8em; font-weight: 400; color: var(--c-skyink); line-height: 0.6; }
+.reveal .rev2 .flowmap.review-line { justify-content: flex-end; margin: 0.55em -12% 0; }
+.reveal .rev2 .flowmap.review-line .phase { flex: 0 0 58%; }
+</style>
+
+<div class="rev2">
+
+<div class="flowmap">
+<div class="phase" style="flex:4.6">
+<span class="phase-label">Under utvikling</span>
+<div class="flow">
+<div class="rpigroup">
+<span class="rpilabel">RPI + AI</span>
+<div class="rpiinner">
+<div class="step review">Plan-review</div>
+<div class="step">Implemen&shy;tasjon</div>
+</div>
+</div>
+<div class="step">pre-commit<br><strong>typecheck</strong></div>
+<div class="step">pre-push<br><strong>testsuite</strong></div>
+</div>
+</div>
+<div class="bigarrow"><span class="ar">→</span><span class="lbl">git push</span></div>
+<div class="phase" style="flex:5">
+<span class="phase-label">CI/CD</span>
+<div class="flow">
+<div class="step">TypeScript</div>
+<div class="step">Lint</div>
+<div class="step">Enhets&shy;tester</div>
+<div class="step">Integra&shy;sjon</div>
+<div class="step">E2E</div>
+</div>
+</div>
+</div>
+
+<div class="downconn"><div class="col"><span class="ar">↓</span></div></div>
+
+<div class="flowmap review-line">
+<div class="phase">
+<span class="phase-label">Review · etter CI/CD</span>
+<div class="flow">
+<div class="step review">AI kode- &amp; feature-review</div>
+<div class="step review">Human review</div>
+</div>
+</div>
+</div>
+
+</div>
+
+Note: Dette er det fulle bildet, med review-sløyfa lagt på. Legg merke til at review skjer i begge ender: helt til venstre, før en eneste linje kode skrives, gjør vi en plan-review — det er den oppdaterte RPI-tankegangen, å avklare og gjennomgå planen tidlig. Så går koden gjennom den lokale verifiseringen og CI/CD som før. Til slutt, etter at pipelinen er grønn, lukkes sløyfa med en egen review-fase: først en AI-drevet kode- og feature-gjennomgang, så en menneskelig review. Poenget er at review ikke er ett enkelt steg på slutten, men rammer inn hele løpet — planen vurderes før, koden vurderes etter.
 
 ---
 
@@ -383,7 +597,7 @@ Note: Tradisjonell kodegjennomgang betyr å lese hundrevis av linjer, ofte når 
 
 > «Trust in AI isn't about faith. It's about verification.»
 
-Note: Kontrasten er kjernen i hele del 1. Blind tillit fører til en nedadgående spiral av teknisk gjeld og mistillit. Verifisert tillit vokser, fordi den bygger på bevis. Utviklerens nye jobb er å definere suksess, gjennomgå planer, bygge pipelines og verifisere output — ikke å skrive hver linje selv.
+Note: Denne kontrasten er kjernen i hele del 1. Blind tillit — «AI-en vet best» — fører til en nedadgående spiral av bugs, sikkerhetshull og teknisk gjeld, og dermed mistillit over tid. Verifisert tillit — «AI-en har bevist det» — vokser i stedet, fordi den bygger på bevis: grønne tester, grønn CI/CD, godkjent plan. Utviklerens nye jobb er å definere suksess, gjennomgå planer, bygge pipelines og verifisere — ikke å skrive hver linje selv.
 
 ---
 
@@ -391,13 +605,13 @@ Note: Kontrasten er kjernen i hele del 1. Blind tillit fører til en nedadgåend
 
 ## Nøkkelpunkter — Del 1
 
-- **Tillitsunderskuddet:** 76 % stoler ikke på AI — og det er rasjonelt
+- **Tillitsunderskuddet:** mange stoler ikke på AI — og det er rasjonelt
 - **Verifiseringspyramiden:** lag på lag av forsvar
 - **CI/CD er kritisk:** automatiser og fail fast
 - **TDD med AI:** du skriver testene, AI implementerer
 - **Plangjennomgang:** 50 linjer plan > 500 linjer kode
 
-Note: Oppsummert: skepsis er rasjonelt, og svaret er lagdelt verifisering. Automatiser med CI/CD, snu arbeidsflyten med TDD, og flytt gjennomgangen fra kode til plan. Dette er fundamentet vi bygger den praktiske delen på.
+Note: La oss oppsummere del 1. Tillitsunderskuddet er rasjonelt, og svaret er lagdelt verifisering. Vi automatiserer med CI/CD og «fail fast», vi snur arbeidsflyten med TDD der du eier testene og AI implementerer, og vi flytter gjennomgangen fra kode til plan. Dette er fundamentet vi nå bygger den praktiske delen på.
 
 ---
 
@@ -407,7 +621,7 @@ Note: Oppsummert: skepsis er rasjonelt, og svaret er lagdelt verifisering. Autom
 
 <div class="bv-scene bv-center"><svg class="bv-fig" style="width:160px"><use href="#bv-mountain"/></svg><svg class="bv-fig" style="width:120px"><use href="#bv-hills"/></svg></div>
 
-Note: Nå som vi vet hvordan vi verifiserer, ser vi på de overordnede prinsippene og hvordan du faktisk kommer i gang.
+Note: Nå som vi vet hvordan vi verifiserer, løfter vi blikket til de overordnede prinsippene — og hvordan du faktisk kommer i gang i praksis.
 
 ---
 
@@ -422,7 +636,7 @@ Note: Nå som vi vet hvordan vi verifiserer, ser vi på de overordnede prinsippe
 
 <div class="bv-corner bv-br"><svg class="bv-fig"><use href="#bv-mountain"/></svg></div>
 
-Note: Beste praksis for AI-utvikling er et bevegelig mål — det som gjelder i dag, kan være forandret om noen måneder. Derfor er ikke dette en fasit. Men kjenner du fundamentet, kan teamet ditt selv vurdere hvordan dere bør tilpasse bruken av AI til akkurat dere. Og kjenner du gårsdagens beste praksis, er det mye lettere å henge med på utviklingen videre. Vi starter med et av fundamentene: compounding engineering.
+Note: En viktig ramme før vi dykker ned: beste praksis for AI-utvikling er et bevegelig mål. Det som gjelder i dag, kan være forandret om noen måneder, så dette er ingen fasit. Men kjenner du fundamentet, kan teamet ditt selv vurdere hvordan dere bør tilpasse AI-bruken til akkurat dere — og kjenner du gårsdagens beste praksis, er det mye lettere å henge med videre. Vi starter med ett av fundamentene: compounding engineering.
 
 ---
 
@@ -438,7 +652,7 @@ Note: Beste praksis for AI-utvikling er et bevegelig mål — det som gjelder i 
 
 <div class="bv-corner bv-br"><svg class="bv-fig"><use href="#bv-shapes"/></svg></div>
 
-Note: Compounding engineering er at investeringer i prosessen forrenter seg. En god testsuite gjør AI-kode bedre, som gjør utvikling raskere, som frigjør tid til å forbedre testsuiten ytterligere. Det er rentes rente for utviklingspraksis — en positiv spiral.
+Note: Compounding engineering handler om at investeringer i selve prosessen forrenter seg. En god testsuite gjør AI-koden bedre, det gjør utviklingen raskere, og det frigjør tid til å forbedre testsuiten enda mer. Det er rentes rente, bare for utviklingspraksis — en positiv spiral der hver forbedring gjør neste AI-interaksjon bedre.
 
 ---
 
@@ -446,7 +660,7 @@ Note: Compounding engineering er at investeringer i prosessen forrenter seg. En 
 
 ## Compounding i praksis
 
-<div class="cards two">
+<div class="cards">
 <div class="card">
 
 #### Domeneminne
@@ -456,9 +670,9 @@ Skriv `auth.md` én gang → spar timevis med gjentatt forklaring senere.
 </div>
 <div class="card">
 
-#### Test-suite
+#### Test suite
 
-En investering som fanger stadig flere bugs over tid.
+En investering som fanger stadig flere bugs over tid — og et tankeskifte fra «fikset buggen» til «la til en test som forhindrer denne typen bug».
 
 </div>
 <div class="card">
@@ -468,16 +682,11 @@ En investering som fanger stadig flere bugs over tid.
 En levende ordliste over domenebegrepene holder AI-ens språk i tråd med vårt — skrevet én gang, brukt overalt.
 
 </div>
-<div class="card">
-
-#### Tankesett
-
-Fra «fikset buggen» til «la til en test som forhindrer denne typen bug».
-
-</div>
 </div>
 
-Note: Konkret ser compounding slik ut: domeneminne du skriver én gang sparer titalls timer senere, testsuiten fanger stadig mer, og en delt domeneordliste holder AI-ens begreper i tråd med domenet vårt. Det viktigste er tankeskiftet — fra å fikse enkeltbugs til å bygge systemer som forhindrer hele klasser av bugs.
+<p class="lead">En god kodebase blir enda viktigere med AI — den hermer ukritisk etter eksemplene den finner.</p>
+
+Note: Konkret ser det slik ut. Domeneminne du skriver én gang — for eksempel en auth.md — sparer deg titalls timer med gjentatt forklaring senere. Test-tankesettet er to ting i ett: testsuiten fanger stadig mer over tid, og det viktigste er tankeskiftet fra «jeg fikset buggen» til «jeg la til en test som forhindrer hele denne typen bug». Her er det verdt å understreke at en god kodebase alltid teller, men teller enda mer med AI — den baserer seg relativt ukritisk på de eksemplene den finner, gode som dårlige, så kvaliteten på det som allerede ligger der forplanter seg videre. Og en delt domeneordliste holder AI-ens begreper i tråd med vårt eget språk.
 
 ---
 
@@ -494,9 +703,11 @@ Note: Konkret ser compounding slik ut: domeneminne du skriver én gang sparer ti
 
 Dette **er** compounding engineering i praksis. ↻
 
+<p><em>Mer er ikke alltid bedre — forbedre det du allerede har.</em></p>
+
 <div class="bv-corner bv-tr bv-sm"><svg class="bv-fig"><use href="#bv-tree"/></svg></div>
 
-Note: Løkken er enkel: gjør en oppgave, legg merke til friksjonen — måtte du forklare det samme flere ganger? — og dokumentér løsningen som en rule, skill eller test. Neste oppgave blir lettere, og du gjentar. Dette er compounding engineering konkretisert — og broen videre til de ti bud.
+Note: Og her er compounding satt i system, som en enkel løkke: du gjør en oppgave med AI, legger merke til friksjonen — måtte du forklare det samme flere ganger? — og så dokumenterer du løsningen som en rule, en skill eller en test. Neste oppgave blir litt lettere, og du gjentar. Dette er compounding engineering konkretisert. Og husk: mer er ikke alltid bedre — det handler vel så mye om å skjerpe og forbedre det du allerede har som å legge til nytt. Dette er broen videre til de ti bud.
 
 ---
 
@@ -510,7 +721,7 @@ Note: Løkken er enkel: gjør en oppgave, legg merke til friksjonen — måtte d
 4. **Aldri ship uverifisert kode** — AI-kode trenger *mer* verifisering
 5. **Gjennomgå planer**, ikke bare kode
 
-Note: De fem første budene handler om disiplin og kvalitetssikring. Du eier tenkingen, du holder konteksten ren, og du definerer hva suksess betyr før AI begynner. Og du sender aldri uverifisert kode — AI-kode trenger mer verifisering, ikke mindre.
+Note: De fem første budene handler om disiplin og kvalitetssikring. Ikke outsource selve tenkingen — AI forsterker, den erstatter ikke. Hold konteksten ren, under førti prosent. Definer hva suksess betyr før implementering, med tester og akseptansekriterier. Send aldri uverifisert kode — AI-kode trenger mer verifisering, ikke mindre. Og gjennomgå planer, ikke bare kode.
 
 ---
 
@@ -526,7 +737,7 @@ Note: De fem første budene handler om disiplin og kvalitetssikring. Du eier ten
 <li><strong>Forbli skeptisk, men pragmatisk</strong> — «trust, but verify»</li>
 </ol>
 
-Note: De fem siste handler om systemene rundt arbeidet. Bygg domeneminne, følg RPI konsekvent, og ikke vær redd for å starte friske sesjoner — det er god hygiene. Invester i compounding, og behold den pragmatiske skepsisen: stol, men verifiser.
+Note: De fem siste handler om systemene rundt arbeidet. Bygg domeneminne med CLAUDE.md, rules og ordlister. Følg RPI konsekvent. Ikke vær redd for å starte friske sesjoner — det er god hygiene, ikke en fiasko. Invester i compounding ved å dokumentere mønstre og bygge systemer. Og behold den pragmatiske skepsisen: «trust, but verify».
 
 ---
 
@@ -565,7 +776,7 @@ Samme dokumenterte prosess hver gang har gitt jevnere kvalitet.
 </div>
 </div>
 
-Note: Dette er erfaringer fra egne prosjekter, ikke en fasit — men noen mønstre har gått igjen. Lav WIP ser ut til å holde kvaliteten oppe, det å dele samme AGENTS.md og skills på tvers av verktøy sparer mye vedlikehold, og eksplisitte «Never Break»-regler blir stort sett respektert. Og en dokumentert prosess via skills har gitt jevnere kvalitet.
+Note: Dette er erfaringer fra egne prosjekter, ikke en fasit — men noen mønstre har gått igjen. Lav WIP, altså én til to oppgaver om gangen, ser ut til å holde kvaliteten oppe. Det å dele samme AGENTS.md og skills på tvers av Claude, Cursor, Codex og Copilot sparer mye vedlikehold, fordi reglene bor ett sted. Eksplisitte «Never Break»-regler blir stort sett respektert. Og en dokumentert prosess via skills har gitt jevnere kvalitet.
 
 ---
 
@@ -594,7 +805,7 @@ Det samme domeneminnet som hjelper AI, har også hjulpet nye folk i gang raskere
 
 <div class="bv-corner bv-tr bv-sm"><svg class="bv-fig"><use href="#bv-book"/></svg></div>
 
-Note: To ting vi ikke så komme i starten. For det første at artefaktene — rules, skills, planer — blir mye mer verdt når de deles i git enn når de ligger lokalt hos én person: teamet eier dem sammen og kan forbedre dem. For det andre at den samme dokumentasjonen som gjør AI bedre, også korter ned onboarding for nye folk. Det er ikke fasit, men det har vært vår erfaring at delt kontekst lønner seg.
+Note: To ting vi ikke så komme i starten. For det første: artefaktene — rules, skills og planer — blir mye mer verdt når de ligger i git og deles, enn når de bor lokalt hos én person. Da eier teamet dem sammen, de kan reviewes, og forbedringer kommer alle til gode. For det andre: den samme dokumentasjonen som gjør AI bedre, korter også ned onboarding for nye folk. Vår erfaring er rett og slett at jo mer vi la i felles filer, jo mindre måtte vi forklare på nytt.
 
 ---
 
@@ -628,7 +839,54 @@ Vi `.md`-dokumenterer ikke hver komponent — mye å vedlikeholde, og glemte opp
 
 <div class="bv-corner bv-br bv-sm"><svg class="bv-fig"><use href="#bv-test"/></svg></div>
 
-Note: Tre lærdommer fra praksis. Den første: la AI kjøre repo-scriptene — pnpm check, pnpm test — i stedet for de underliggende «rå» verktøyene direkte, som tsc eller eslint. Skriptet vet allerede riktige flagg og stier, så hver kjøring blir lik. Den andre: legg inn et fast rydde-pass etter at koden virker — først forenkle, så luke bort typisk AI-«slop». Og den tredje, motsatt vei: ikke dokumentér alt i .md-filer — det blir mye å vedlikeholde, og en glemt oppdatering gjør fort at dokumentasjonen lyver.
+Note: Tre konkrete lærdommer. Den første: la AI kjøre repo-scriptene — pnpm check og pnpm test — i stedet for de rå verktøyene som tsc eller eslint direkte. Skriptet kapsler inn riktige flagg og stier, så hver kjøring blir lik. Den andre: legg inn et fast rydde-pass når koden virker — forenkle først, så luk bort typisk AI-støy som døde sjekker og støyende kommentarer. Og den tredje, motsatt vei: ikke dokumentér alt i .md-filer — det blir mye å vedlikeholde, og en glemt oppdatering gjør fort at dokumentasjonen lyver.
+
+---
+
+<span class="kicker">Del 2 · Automatiske vakter</span>
+
+## Et knippe automatiske vakter
+
+| Sjekk | Hva det fanger | Kommando |
+|---|---|---|
+| Typer | type- og skrivefeil før kjøring | `npm run typecheck` |
+| Lint | regelbrudd og risikomønstre | `npm run lint` |
+| **jscpd** | kopiert/limt kode på tvers av filer | `npx jscpd .` |
+| **knip** | ubrukte filer, eksporter og avhengigheter | `npx knip` |
+| **osv-scanner** | kjente sårbarheter (CVE) i avhengigheter | `npx osv-scanner` |
+
+Alt samlet bak ett repo-script: `npm run check`.
+
+Note: Statisk analyse er mer enn bare en linter. jscpd er en copy-paste-detektor — den finner kode som er duplisert på tvers av filer, så samme logikk ikke lever fem steder. knip finner død kode: filer, eksporter og pakker ingen bruker lenger. Og osv-scanner, fra Google, sjekker avhengighetene mot databasen over kjente sårbarheter. Ingen av dem trenger å starte appen, og alt gjemmes bak ett repo-script — npm run check — så det alltid kjøres likt, av både mennesker og AI.
+
+---
+
+<span class="kicker">Del 2 · Token-økonomi</span>
+
+## Optimaliser token-bruk
+
+<div class="cards two">
+<div class="card">
+
+#### Enkelt
+
+- Hold konteksten **ren**
+- Bruk billigere modeller til enklere oppgaver — f.eks. planlegging med GPT-5.5, implementasjon med GPT-5.4 (eller billigere)
+- Vurder hvor mye **thinking/reasoning effort** modellen faktisk trenger
+
+</div>
+<div class="card">
+
+#### Avansert
+
+- Verktøy som presenterer konteksten til AI mer effektivt
+- Antall **skills** o.l. øker konteksten hver samtale starter med
+- Lange filer koster — AI søker etter relevante filer og leser kanskje hele fila
+
+</div>
+</div>
+
+Note: Token-bruk handler om både økonomi og kvalitet — en ren, fokusert kontekst gir både bedre svar og lavere kostnad. Det enkle først: rydd i konteksten, bruk en billigere modell til de enklere oppgavene, og skru ned «thinking»-nivået når oppgaven ikke krever dyp resonnering. Det mer avanserte handler om hva som fyller konteksten i utgangspunktet — verktøy som leverer kontekst smartere, hvor mange skills du har lastet, og hvor lange filene i prosjektet er, siden AI gjerne leser hele filer når den leter etter relevant kode.
 
 ---
 
@@ -648,7 +906,7 @@ Note: Tre lærdommer fra praksis. Den første: la AI kjøre repo-scriptene — p
 | Rå verktøy-kommandoer feiler | Repo-script: `pnpm check`, `pnpm test` |
 | AI-«slop» blir liggende | Rydde-pass: forenkle, så luk bort støy |
 
-Note: De fleste problemer har et kjent motgift. Lange sesjoner løses med progress-filer og 40 %-regelen, blind tillit med CI/CD og TDD, og monolittiske oppgaver med nedbryting i atomiske biter. Kjenner du symptomet, kjenner du løsningen.
+Note: De fleste problemer har et kjent motgift, og denne tabellen er nesten en feilsøkingsguide. Lange sesjoner løser du med progress-filer og førti-prosent-regelen. Blind tillit med CI/CD, TDD og code review. Monolittiske oppgaver ved å bryte dem ned i atomiske biter. Kjenner du symptomet, kjenner du som regel løsningen.
 
 ---
 
@@ -667,7 +925,7 @@ Du trenger ikke alt fra dag én — bygg det opp gradvis.
 
 <div class="bv-corner bv-tr bv-sm"><svg class="bv-fig"><use href="#bv-plant"/></svg></div>
 
-Note: Modningskurven er bevisst overkommelig. Dag én lager du en CLAUDE.md. I løpet av uka din første rules-fil. I løpet av måneden en delt domeneordliste, og i løpet av kvartalet dokumenterer du en arbeidsflyt som en skill. Du trenger ikke alt på en gang.
+Note: Modningskurven er bevisst overkommelig, så ingen skal føle at dette er alt-eller-ingenting. Dag én lager du en CLAUDE.md med stack, kritiske regler og kommandoer. I løpet av uka din første rules-fil. I løpet av måneden en delt domeneordliste. Og i løpet av kvartalet dokumenterer du en arbeidsflyt som en skill. Du trenger altså ikke alt fra dag én — det bygges opp gradvis.
 
 ---
 
@@ -703,18 +961,16 @@ Note: Modningskurven er bevisst overkommelig. Dag én lager du en CLAUDE.md. I l
 </div>
 </div>
 
-Note: Dette er reisen samlet på ett bilde. Fra vibe coding til strukturert RPI, fra blind til verifisert tillit, fra kaos til disiplin, fra engangsløsninger til systemer som forrenter seg. Det er ikke seks separate endringer, men én sammenhengende modning.
+Note: Dette er hele reisen samlet på ett bilde. Fra vibe coding til strukturert RPI, fra blind til verifisert tillit, fra kaotisk kontekst til domeneminne, fra manuell review til CI/CD og plangjennomgang, og fra engangsløsninger til compounding. Poenget er at det ikke er seks separate endringer, men én sammenhengende modning.
 
 ---
 
-<!-- .slide: class="closing" -->
+<!-- .slide: class="section-header" data-background-gradient="linear-gradient(150deg, #eaf0f4 0%, #f0e4cc 100%)" -->
 
-## Kort oppsummert
+## Takk for oss! Spørsmål?
 
-Verifiser og standardiser. Invester i prosessen.
-
-Takk for oss! Spørsmål?
+<p class="lead">Verifiser og standardiser — invester i prosessen.</p>
 
 <div class="bv-scene bv-center"><svg class="bv-fig" style="width:170px"><use href="#bv-mountain"/></svg><svg class="bv-fig" style="width:130px"><use href="#bv-hills"/></svg></div>
 
-Note: Kort oppsummert: verifiser og standardiser arbeidet, og invester i prosessen så den forrenter seg over tid. Det er det som skiller akselerasjon fra teknisk gjeld. Takk for oppmerksomheten; jeg åpner for spørsmål.
+Note: Helt kort oppsummert: verifiser og standardiser arbeidet, og invester i selve prosessen, så den forrenter seg over tid. Det er det som skiller ekte akselerasjon fra teknisk gjeld. Tusen takk for oppmerksomheten — så åpner jeg for spørsmål.
